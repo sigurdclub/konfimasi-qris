@@ -65,7 +65,7 @@
                 </section>
                 <!--/ Content wrapper -->
 
-
+                @yield('modal')
                 <!-- Footer Layout Fix -->
                     @include('layouts.footer')
                 <!--/ Footer Layout Fix -->

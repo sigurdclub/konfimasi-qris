@@ -14,6 +14,7 @@
                     class   = "rounded mx-auto d-block" 
                     width   = "25%"
                 >
+                
 
                 <!-- Text -->
                 <section style="display: flex; justify-content: center ">
@@ -23,8 +24,26 @@
                         </div>
                     </div>
                 </section>
-                
 
+                <!-- Container Tutorial -->
+                <section style="display: flex;justify-content: center">
+                    <div>
+                        <button class="button-dashboard" data-bs-toggle="modal" data-bs-target="#modalPanduan">
+                            <span class="button_top"> Panduan</span>
+                        </button>
+                        <button class="button-dashboard" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <span class="button_top"> QR CODE </span>
+                        </button>
+                    </div>
+                </section>
+
+
+                
+                <!-- Modal Tutorial and QR Code -->
+                <section>
+                    @include('pages.dashboard.modal.modal_QRcode')
+                    @include('pages.dashboard.modal.modal_panduan')
+                </section>
 
             </div>
         </div>

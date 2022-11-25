@@ -17,13 +17,13 @@ use App\Http\Controllers\UploadBuktiController;
 
 // ======== Dashboard ======== //
 Route::get('/', function () {
-    return view('pages.dashboard');
+    return view('pages.dashboard.dashboard');
 });
 
 
 // ======== Data Pribadi ======== //
 Route::get('/data-pribadi', function () {
-    return view('pages.dataPribadi');
+    return view('pages.data-pribadi.dataPribadi');
 });
 
 
