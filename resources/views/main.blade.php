@@ -40,8 +40,8 @@
 
     <body>
         <!-- Layout wrapper -->
-        <div class="layout-wrapper layout-content-navbar">
-        <div class="layout-container">
+        <section class="layout-wrapper layout-content-navbar">
+        <section class="layout-container">
             
             <!-- Menu -->
                 <!-- Layouts Fix Sidebar -->
@@ -50,7 +50,7 @@
             <!-- / Menu -->
             
             <!-- Layout container -->
-                <div class="layout-page">
+                <section class="layout-page">
                     
                 <!-- Navbar -->
                     @include('layouts.navbar')
@@ -58,11 +58,11 @@
                 
 
                 <!-- Content wrapper -->
-                <div class="container-fluid content-wrapper">
+                <section class="container-fluid content-wrapper">
                     <!-- Content -->
                         @yield('content')
                     <!--/ Content -->
-                </div>
+                </section>
                 <!--/ Content wrapper -->
 
 

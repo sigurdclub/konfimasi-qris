@@ -12,17 +12,21 @@ rel="stylesheet"
 <!-- Icons. Uncomment required icon fonts -->
 <link rel="stylesheet" href="template/assets/vendor/fonts/boxicons.css" />
 
-<!-- Core CSS -->
+<!-- Vendors Core CSS -->
 <link rel="stylesheet" href="template/assets/vendor/css/core.css" class="template-customizer-core-css" />
 <link rel="stylesheet" href="template/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+<link rel="stylesheet" href="template/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+<link rel="stylesheet" href="template/assets/vendor/libs/apex-charts/apex-charts.css" />
 <link rel="stylesheet" href="template/assets/css/demo.css" />
 
-<!-- Vendors CSS -->
-<link rel="stylesheet" href="template/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-<link rel="stylesheet" href="template/assets/vendor/libs/apex-charts/apex-charts.css" />
+<!-- CSS Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 
-<!-- Page CSS -->
+
+<!-- Mind CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+
 
 <!-- Helpers -->
 <script src="template/assets/vendor/js/helpers.js"></script>

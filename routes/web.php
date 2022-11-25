@@ -13,9 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// ======== Dashboard ======== //
 Route::get('/', function () {
-    return view('main');
+    return view('pages.dashboard');
 });
+
+
+
+
+
+
+
+
+
+
+
+// ======== Data Pribadi ======== //
 Route::get('/data-pribadi', function () {
     return view('pages.dataPribadi');
 });

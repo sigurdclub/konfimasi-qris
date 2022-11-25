@@ -1,0 +1,21 @@
+/* ==== CSS ALL UI ==== */
+@font-face {
+    font-family: code;
+    src: url(/assets/font/CodeNext-Trial-SemiBold.otf);
+  }
+
+a {
+    text-decoration: unset;
+}
+
+    /* Card Non Border  */
+.none-border {
+    border: unset;
+    box-shadow: unset;
+}
+
+
+
+/* ==== Dashboard ==== */
+
+
