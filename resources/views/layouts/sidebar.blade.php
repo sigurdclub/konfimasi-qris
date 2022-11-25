@@ -69,7 +69,7 @@
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
         <li class="menu-item active">
-        <a href="index.html" class="menu-link">
+        <a href="/" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
             <div data-i18n="Analytics" class="dashboard1">
                 Dashboard
@@ -88,26 +88,26 @@
 
         </li>
         <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <a href="/history-transaksi" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
             <div data-i18n="Authentications">History Transaksi</div>
         </a>
-       
+
         </li>
         <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <a href="upload-transaksi" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-cube-alt"></i>
             <div data-i18n="Misc">Upload Bukti Transaksi</div>
         </a>
-        
+
         </li>
         <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-cube-alt"></i>
             <div data-i18n="Misc"> Cek Status Transaksi</div>
         </a>
-        
+
         </li>
-       
+
     </ul>
     </aside>

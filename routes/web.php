@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UploadBuktiController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,16 +21,19 @@ Route::get('/', function () {
 });
 
 
-
-
-
-
-
-
-
-
-
 // ======== Data Pribadi ======== //
 Route::get('/data-pribadi', function () {
     return view('pages.dataPribadi');
 });
+
+
+
+// ======== History Transaksi ======== //
+Route::get('/history-transaksi', function () {
+    return view('pages.history-transaksi.index');
+});
+
+
+
+// ======== Upload Transaksi ======== //
+Route::get('upload-transaksi', [UploadBuktiController::class, 'create']);
