@@ -77,32 +77,33 @@
         </a>
         </li>
 
+
         <li class="menu-header small text-uppercase">
         <span class="menu-header-text">Menu</span>
         </li>
         <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <a href="data-pribadi" class="menu-link ">
             <i class="menu-icon tf-icons bx bx-dock-top"></i>
             <div data-i18n="Account Settings">Data Pribadi</div>
         </a>
 
         </li>
         <li class="menu-item">
-        <a href="/history-transaksi" class="menu-link menu-toggle">
+        <a href="/history-transaksi" class="menu-link ">
             <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
             <div data-i18n="Authentications">History Transaksi</div>
         </a>
 
         </li>
         <li class="menu-item">
-        <a href="upload-transaksi" class="menu-link menu-toggle">
+        <a href="upload-transaksi" class="menu-link ">
             <i class="menu-icon tf-icons bx bx-cube-alt"></i>
             <div data-i18n="Misc">Upload Bukti Transaksi</div>
         </a>
 
         </li>
         <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <a href="javascript:void(0);" class="menu-link ">
             <i class="menu-icon tf-icons bx bx-cube-alt"></i>
             <div data-i18n="Misc"> Cek Status Transaksi</div>
         </a>

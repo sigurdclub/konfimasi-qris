@@ -55,3 +55,14 @@
         transform: translateY(0);
         }
 
+/* ==== Data Pribadi ==== */
+        
+    /* icon position */
+    .container-icon-edit { position: relative; }
+.container-icon-edit img { display: block; }
+.container-icon-edit .bxs-edit { 
+    position: absolute; 
+    bottom:10%; 
+    left:60%; 
+}
+
