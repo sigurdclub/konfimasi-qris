@@ -36,4 +36,7 @@ Route::get('/history-transaksi', function () {
 
 
 // ======== Upload Transaksi ======== //
-Route::get('upload-transaksi', [UploadBuktiController::class, 'create']);
+Route::get('upload-transaksi', [UploadBuktiController::class, 'index']);
+Route::get('upload-transaksi/create', [UploadBuktiController::class, 'create']);
+Route::post('upload-transaksi/store', [UploadBuktiController::class, 'store']);
+

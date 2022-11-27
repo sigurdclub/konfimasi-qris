@@ -95,7 +95,7 @@
 
         </li>
         <li class="menu-item">
-        <a href="upload-transaksi" class="menu-link menu-toggle">
+        <a href="upload-transaks" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-cube-alt"></i>
             <div data-i18n="Misc">Upload Bukti Transaksi</div>
         </a>
