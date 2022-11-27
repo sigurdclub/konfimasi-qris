@@ -10,11 +10,11 @@
             </div>
             <div class="col-md-12">
                 <label for="inputEmail4" class="form-label">Nama Subjek Pajak</label>
-                <input type="text" class="form-control" id="inputEmail4" name="nama" placeholder="Input Nama Subjek Pajak">
+                <input type="text" class="form-control" id="inputEmail4" name="nama_subjek" placeholder="Input Nama Subjek Pajak">
             </div>
             <div class="col-md-12">
                 <label for="inputEmail4" class="form-label">Nama Pengirim</label>
-                <input type="text" class="form-control" id="inputEmail4" name="nama" placeholder="Input Nama Pengirim">
+                <input type="text" class="form-control" id="inputEmail4" name="nama_pengirim" placeholder="Input Nama Pengirim">
             </div>
             <div class="col-md-12">
                 <label for="inputEmail4" class="form-label">No.Hp</label>
