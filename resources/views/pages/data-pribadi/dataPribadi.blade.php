@@ -14,7 +14,7 @@
                                 <img src="assets/img/profile icon.png" class="rounded mx-auto d-block" alt="..." width="35%">
                             </div>
                             <div style="margin-top: 10%">
-                                <h3 style="font-family: code;color:black">Admin</h3>
+                                <h3 style="font-family: code;color:black"> Public </h3>
                                 <h6 style="font-family: code;color: rgb(82, 82, 82)">730801300500401480</h6>
                             </div>
                         </article>
@@ -47,6 +47,7 @@
                                         placeholder="John Doe"
                                         aria-label="John Doe"
                                         aria-describedby="basic-icon-default-fullname2"
+                                        style="padding: 12px"
                                         />
                                     </div>
                                     </div>
@@ -65,6 +66,7 @@
                                     placeholder="ACME Inc."
                                     aria-label="ACME Inc."
                                     aria-describedby="basic-icon-default-company2"
+                                    style="padding: 12px"
                                     />
                                 </div>
                                     </div>
@@ -87,6 +89,7 @@
                                         placeholder="John Doe"
                                         aria-label="John Doe"
                                         aria-describedby="basic-icon-default-fullname2"
+                                        style="padding: 12px"
                                         />
                                     </div>
                                     </div>
@@ -99,12 +102,13 @@
                                     ><i class="bx bx-buildings"></i
                                     ></span>
                                     <input
-                                    type="text"
-                                    id="basic-icon-default-company"
-                                    class="form-control"
-                                    placeholder="ACME Inc."
-                                    aria-label="ACME Inc."
-                                    aria-describedby="basic-icon-default-company2"
+                                        id                  = "basic-icon-default-company"
+                                        type                = "text"
+                                        class               = "form-control"
+                                        style               = "padding: 12px"
+                                        placeholder         = "ACME Inc."
+                                        aria-label          = "ACME Inc."
+                                        aria-describedby    = "basic-icon-default-company2"
                                     />
                                 </div>
                                     </div>
@@ -121,12 +125,13 @@
                                         ><i class="bx bx-user"></i
                                         ></span>
                                         <input
-                                        type="text"
-                                        class="form-control"
-                                        id="basic-icon-default-fullname"
-                                        placeholder="John Doe"
-                                        aria-label="John Doe"
-                                        aria-describedby="basic-icon-default-fullname2"
+                                            id               = "basic-icon-default-fullname"
+                                            type             = "text"
+                                            class            = "form-control"
+                                            aria-label       = "John Doe"
+                                            placeholder      = "John Doe"
+                                            aria-describedby = "basic-icon-default-fullname2"
+                                            style="padding: 12px"
                                         />
                                     </div>
                                     </div>
@@ -145,11 +150,18 @@
                                     placeholder="ACME Inc."
                                     aria-label="ACME Inc."
                                     aria-describedby="basic-icon-default-company2"
+                                    style="padding: 12px"
                                     />
                                 </div>
                                     </div>
                                 </div>
                             </section>
+
+                            <!-- button save -->
+                            <section style="display: flex; justify-content: center;margin-top:2%">
+                                <button type="submit" class="btn btn-primary" style="width: 30% ;background-color: #18c42c;border: 1px black solid">Save</button>
+                            </section>
+
                         </form>
 
                             
