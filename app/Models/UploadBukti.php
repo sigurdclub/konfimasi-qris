@@ -18,6 +18,8 @@ class UploadBukti extends Model
         'no_hp',
         'foto_bukti_bayar',
         'tanggal',
-        'status'
+        'status',
+        'created_at',
+        'updated_at'
     ];
 }

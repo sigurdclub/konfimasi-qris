@@ -2,7 +2,7 @@
 
 @section('content')
     <div>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="{{ url('upload-transaksi/store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="col-md-12">
                 <label for="inputEmail4" class="form-label">NOP</label>
@@ -22,7 +22,7 @@
             </div>
             <div class="col-12">
                 <label for="inputAddres2" class="form-label">Foto Bukti Transfer</label>
-                <input type="file" class="form-control" id="inputAddres2" name="gambar">
+                <input type="file" class="form-control" id="inputAddres2" name="foto_bukti_bayar">
             </div>
             <div class="col-12" style="display: flex; justify-content: right;margin-top: 4%">
                 <button type="submit" name="kirim" class="btn btn-primary">Kirim</button>

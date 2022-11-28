@@ -96,8 +96,7 @@
 
         </li>
         <li class="menu-item">
-        <a href="upload-transaks" class="menu-link menu-toggle">
-        <a href="upload-transaksi" class="menu-link ">
+        <a href="{{ url('upload-transaksi') }}" class="menu-link ">
             <i class="menu-icon tf-icons bx bx-cube-alt"></i>
             <div data-i18n="Misc">Upload Bukti Transaksi</div>
         </a>
