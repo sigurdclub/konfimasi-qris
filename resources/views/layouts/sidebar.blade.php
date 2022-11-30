@@ -107,7 +107,6 @@
             <i class="menu-icon tf-icons bx bx-cube-alt"></i>
             <div data-i18n="Misc"> Cek Status Transaksi</div>
         </a>
-
         </li>
 
     </ul>

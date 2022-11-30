@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Models\UploadBukti;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 
 class UploadBuktiController extends Controller
@@ -33,7 +32,7 @@ class UploadBuktiController extends Controller
         // dd($validate);
         if($request->file('foto_bukti_bayar')){
             $file_name = $request->file('foto_bukti_bayar')->hashName();
-            $validate['foto_bukti_bayar'] = $request->file('foto_bukti_bayar')->storeAs('public/foto-bukti', $file_name);
+            $validate['foto_bukti_bayar'] = $request->file('foto_bukti_bayar')->storeAs('foto-bukti', $file_name);
         }
 
         UploadBukti::create($validate);

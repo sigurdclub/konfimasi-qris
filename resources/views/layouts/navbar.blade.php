@@ -10,7 +10,7 @@
 
                 <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
                 <!-- Search -->
-                <div class="navbar-nav align-items-center">
+                {{-- <div class="navbar-nav align-items-center">
                     <div class="nav-item d-flex align-items-center">
                     <i class="bx bx-search fs-4 lh-0"></i>
                     <input
@@ -20,7 +20,7 @@
                         aria-label="Search..."
                     />
                     </div>
-                </div>
+                </div> --}}
                 <!-- /Search -->
 
                 <ul class="navbar-nav flex-row align-items-center ms-auto">
@@ -38,7 +38,7 @@
 
                     <!-- User -->
                     <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                    <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown">
                         <div class="avatar avatar-online">
                         <img src="assets/img/profile icon.png" alt class="w-px-40 h-auto rounded-circle" />
                         </div>
@@ -87,7 +87,7 @@
                         <div class="dropdown-divider"></div>
                         </li>
                         <li>
-                        <a class="dropdown-item" href="auth-login-basic.html">
+                        <a class="dropdown-item" href="#">
                             <i class="bx bx-power-off me-2"></i>
                             <span class="align-middle">Log Out</span>
                         </a>
