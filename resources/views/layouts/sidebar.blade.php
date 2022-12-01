@@ -97,8 +97,6 @@
                 <i class="menu-icon tf-icons bx bx-user-check"></i>
                 <div data-i18n="Misc"> Cek Status Transaksi</div>
             </a>
-       
-
         </li>
         <li class="menu-item">
             <a href="/history-transaksi" class="menu-link ">
@@ -106,18 +104,13 @@
                 <i class="menu-icon tf-icons bx bx-history"></i>
                 <div data-i18n="Authentications">History Transaksi</div>
             </a>
-
         </li>
         <li class="menu-item">
-
             <a href="data-pribadi" class="menu-link ">
             
                 <i class="menu-icon tf-icons bx bxs-user-account"></i>
                 <div data-i18n="Account Settings">Data Pribadi</div>
             </a>
-
-       
-
         </li>
 
     </ul>
