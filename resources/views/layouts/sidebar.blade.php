@@ -56,10 +56,11 @@
             </g> --}}
             </svg>
         </span>
+        <img src="assets/img/KabupatenMaros.png" class="" alt="..." width="20%">
         <span class="app-brand-text  menu-text fw-bolder ms-2">Bapenda Maros</span>
         </a>
 
-        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+        <a href="javascript:void(0);" class="button-color layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
         <i class="bx bx-chevron-left bx-sm align-middle"></i>
         </a>
     </div>
@@ -82,31 +83,40 @@
         <span class="menu-header-text">Menu</span>
         </li>
         <li class="menu-item">
-        <a href="data-pribadi" class="menu-link ">
-            <i class="menu-icon tf-icons bx bx-dock-top"></i>
-            <div data-i18n="Account Settings">Data Pribadi</div>
-        </a>
+            <a href="{{ url('upload-transaksi') }}" class="menu-link ">
+            
+                <i class="menu-icon tf-icons bx bx-upload"></i>
+                <div data-i18n="Misc">Upload Bukti Transaksi</div>
+            </a>
+       
 
         </li>
         <li class="menu-item">
-        <a href="/history-transaksi" class="menu-link ">
-            <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-            <div data-i18n="Authentications">History Transaksi</div>
-        </a>
+            <a href="status-transaksi" class="menu-link ">
+            
+                <i class="menu-icon tf-icons bx bx-user-check"></i>
+                <div data-i18n="Misc"> Cek Status Transaksi</div>
+            </a>
+       
 
         </li>
         <li class="menu-item">
-        <a href="{{ url('upload-transaksi') }}" class="menu-link ">
-            <i class="menu-icon tf-icons bx bx-cube-alt"></i>
-            <div data-i18n="Misc">Upload Bukti Transaksi</div>
-        </a>
+            <a href="/history-transaksi" class="menu-link ">
+            
+                <i class="menu-icon tf-icons bx bx-history"></i>
+                <div data-i18n="Authentications">History Transaksi</div>
+            </a>
 
         </li>
         <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link ">
-            <i class="menu-icon tf-icons bx bx-cube-alt"></i>
-            <div data-i18n="Misc"> Cek Status Transaksi</div>
-        </a>
+
+            <a href="data-pribadi" class="menu-link ">
+            
+                <i class="menu-icon tf-icons bx bxs-user-account"></i>
+                <div data-i18n="Account Settings">Data Pribadi</div>
+            </a>
+
+       
 
         </li>
 

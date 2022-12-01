@@ -20,6 +20,15 @@
 
         /* Button tutorial */
 
+        .button-color{
+            background-color: #18c42c;
+            color: white;
+        }
+        .button-color:hover{
+            background-color: #169e25;
+            color: white;
+        }
+
         .button-dashboard {
             /* Variables */
         --button_radius: 0.75em;
@@ -66,3 +75,19 @@
     left:60%; 
 }
 
+
+
+/* ==== Upload Bukti Bayar ==== */
+.form-upload label{
+    color: black;
+}
+
+/* ==== Preview ==== */
+
+
+/* ==== status transaksi ==== */
+
+.table-status-transaksi th{
+    color: black !important;
+    font-size: 14px !important;
+}

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StatusTransaksiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UploadBuktiController;
 
@@ -21,7 +22,10 @@ Route::get('/', function () {
 });
 
 
-// ======== Data Pribadi ======== //
+// ======== Cek Status Transaksi ======== //
+Route::get('status-transaksi', [StatusTransaksiController::class, 'statusTransaksiView'])->name('status-transaksi');
+
+// ======== Cek Status Transaksi ======== //
 Route::get('/data-pribadi', function () {
     return view('pages.data-pribadi.dataPribadi');
 });
@@ -36,8 +40,11 @@ Route::get('/history-transaksi', function () {
 
 
 // ======== Upload Transaksi ======== //
-Route::get('upload-transaksi', [UploadBuktiController::class, 'create']);
-Route::post('upload-transaksi/store', [UploadBuktiController::class, 'store']);
+Route::get('upload-transaksi', [UploadBuktiController::class, 'create'])->name('upload-transaksi');
+// Route preview transaksi
+Route::get('preview', [UploadBuktiController::class, 'previewTransaksi'])->name('preview');
+//  Route submit data
+Route::post('upload-transaksi/store', [UploadBuktiController::class, 'store'])->name('upload-transaksi/store');
 Route::get('upload-transaksi/edit{id}', [UploadBuktiController::class, 'edit']);
 Route::post('upload-transaksi/update{id}', [UploadBuktiController::class, 'update']);
 Route::post('upload-transaksi/delete{id}', [UploadBuktiController::class, 'delete']);

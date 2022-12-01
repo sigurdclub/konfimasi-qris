@@ -16,8 +16,33 @@ class UploadBuktiController extends Controller
     // Method showing form upload transaksi
     public function create()
     {
+        
         return view('pages.upload-transaksi.create');
     }
+
+
+    // preview transaksi
+    public function previewTransaksi(Request $request){
+
+        $nop                = $request->nop;
+        $no_hp              = $request->no_hp;
+        $nama_subjek        = $request->nama_subjek;
+        $nama_pengirim      = $request->nama_pengirim;
+        $foto_bukti_bayar   = $request->foto_bukti_bayar; 
+
+        
+        
+        return view('pages.upload-transaksi.modal.preview',compact(
+            'nop',
+            'no_hp',
+            'nama_subjek',
+            'nama_pengirim',
+            'foto_bukti_bayar'
+        
+        ));
+
+    }
+
 
     // Method create new upload transaksi
     public function store(Request $request)
@@ -30,7 +55,6 @@ class UploadBuktiController extends Controller
             "foto_bukti_bayar" => "required|image|mimes:jpeg,png,jpg|max:2048",
 
         ]);
-        // dd($validate);
         if($request->file('foto_bukti_bayar')){
             $file_name = $request->file('foto_bukti_bayar')->hashName();
             $validate['foto_bukti_bayar'] = $request->file('foto_bukti_bayar')->storeAs('public/foto-bukti', $file_name);
@@ -43,7 +67,7 @@ class UploadBuktiController extends Controller
     //Method view form edit data
     public function edit($id)
     {
-       $model = UploadBukti::find($id);
+        $model = UploadBukti::find($id);
         return view('pages.upload-transaksi.edit', compact('model'));
     }
 
