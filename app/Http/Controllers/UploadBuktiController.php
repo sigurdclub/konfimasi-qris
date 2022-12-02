@@ -29,18 +29,16 @@ class UploadBuktiController extends Controller
         $nama_pengirim      = $request->nama_pengirim;
         $foto_bukti_bayar   = $request->foto_bukti_bayar; 
 
-        
-        
         return view('pages.upload-transaksi.modal.preview',compact(
             'nop',
             'no_hp',
             'nama_subjek',
             'nama_pengirim',
             'foto_bukti_bayar'
-        
+            
         ));
-
     }
+
 
 
     // Method create new upload transaksi
@@ -54,6 +52,7 @@ class UploadBuktiController extends Controller
             "foto_bukti_bayar" => "required|image|mimes:jpeg,png,jpg|max:2048",
 
         ]);
+        
         if($request->file('foto_bukti_bayar')){
             $file_name = $request->file('foto_bukti_bayar')->hashName();
             $validate['foto_bukti_bayar'] = $request->file('foto_bukti_bayar')->storeAs('foto-bukti', $file_name);

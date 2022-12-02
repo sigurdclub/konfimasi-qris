@@ -32,9 +32,10 @@
                             </td>
                             </tr>
 
+                            
                             <td>
-
-                                <img src="{{ $item->foto_bukti_bayar }}" alt="">
+                                
+                                <img src="{{'storage/'.$item->foto_bukti_bayar}}" alt="">
                             </td>
 
                         </tbody>

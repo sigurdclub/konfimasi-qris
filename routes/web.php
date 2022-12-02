@@ -27,20 +27,11 @@ Route::controller(LoginController::class)->group(function(){
     Route::post('logout','logout')->name('logout');
 
 });
-
-
-
-
-
         // ======== Middleware ======== //
     Route::group(['middleware' => ['auth','akses']], function(){
-
-
+        
         // ======== Dashboard ======== //
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-
-
-
         // ======== Upload Transaksi ======== //
     Route::get('upload-transaksi', [UploadBuktiController::class, 'create'])->name('upload-transaksi');
     // Route preview transaksi
@@ -50,14 +41,8 @@ Route::controller(LoginController::class)->group(function(){
     Route::get('upload-transaksi/edit{id}', [UploadBuktiController::class, 'edit']);
     Route::post('upload-transaksi/update{id}', [UploadBuktiController::class, 'update']);
     Route::post('upload-transaksi/delete{id}', [UploadBuktiController::class, 'delete']);
-
-
     // ======== Cek Status Transaksi ======== //
     Route::get('status-transaksi', [StatusTransaksiController::class, 'statusTransaksiView'])->name('status-transaksi');
-
-
-
-
     // ======== Data Pribadi ======== //
     Route::get('/data-pribadi', function () {
         return view('pages.data-pribadi.dataPribadi');

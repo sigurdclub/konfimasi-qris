@@ -1,93 +1,135 @@
-    /* ==== CSS ALL UI ==== */
-    @font-face {
-        font-family: code;
-        src: url(/assets/font/CodeNext-Trial-SemiBold.otf);
+        /* ==== CSS ALL UI ==== */
+        @font-face {
+            font-family: code;
+            src: url(/assets/font/CodeNext-Trial-SemiBold.otf);
+        }
+
+        a {
+            text-decoration: unset;
+        }
+
+            /* Card Non Border  */
+        .none-border {
+            border: unset;
+            box-shadow: unset;
+        }
+
+
+
+        /* ==== Dashboard ==== */
+
+            /* Button Dashboard */
+
+            .button-color{
+                background-color: #18c42c;
+                color: white;
+            }
+            .button-color:hover{
+                background-color: #169e25;
+                color: white;
+            }
+
+            .button-dashboard {
+                /* Variables */
+            --button_radius: 0.75em;
+            --button_color: #18c42c;
+            /* 25a04e */
+            --button_outline_color: #000000;
+            font-size: 17px;
+            font-weight: bold;
+            border: none;
+            border-radius: var(--button_radius);
+            background: var(--button_outline_color);
+            }
+            
+            .button_top {
+            display: block;
+            box-sizing: border-box;
+            border: 2px solid var(--button_outline_color);
+            border-radius: var(--button_radius);
+            padding: 0.75em 1.5em;
+            background: var(--button_color);
+            color: var(--button_outline_color);
+            transform: translateY(-0.2em);
+            transition: transform 0.1s ease;
+            }
+            
+            .button-dashboard:hover .button_top {
+                /* Pull the button upwards when hovered */
+            transform: translateY(-0.33em);
+            }
+            
+            .button-dashboard:active .button_top {
+                /* Push the button downwards when pressed */
+            transform: translateY(0);
+            }
+
+            
+    /* ==== Data Pribadi ==== */
+            
+        /* icon position */
+        .container-icon-edit { position: relative; }
+    .container-icon-edit img { display: block; }
+    .container-icon-edit .bxs-edit { 
+        position: absolute; 
+        bottom:10%; 
+        left:60%; 
     }
 
-    a {
-        text-decoration: unset;
+
+
+    /* ==== Upload Bukti Bayar ==== */
+    .form-upload label{
+        color: black;
     }
 
-        /* Card Non Border  */
-    .none-border {
-        border: unset;
-        box-shadow: unset;
+    /* ==== Preview ==== */
+
+        /* icon-number */
+        .icon-number p {
+            text-align: center;
+            font-family: code;
+            padding: 12px;
+        }
+        
+        /* button */
+        .button-next {
+            cursor: pointer;
+            font-weight: 700;
+            font-family: Helvetica,"sans-serif";
+            transition: all .2s;
+            padding: 10px 20px;
+            border-radius: 100px;
+            background: #18c42c;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+        
+        .button-next:hover {
+            background: #18c42c;
+        }
+        
+        .button-next > svg {
+            width: 34px;
+            margin-left: 10px;
+            transition: transform .3s ease-in-out;
+        }
+        
+        .button-next:hover svg {
+            transform: translateX(5px);
+        }
+        
+        .button-next:active {
+            transform: scale(0.95);
+        }
+        
+        
+
+    /* ==== status transaksi ==== */
+
+    .table-status-transaksi th{
+        color: black !important;
+        font-size: 14px !important;
     }
-
-
-
-    /* ==== Dashboard ==== */
-
-        /* Button tutorial */
-
-        .button-color{
-            background-color: #18c42c;
-            color: white;
-        }
-        .button-color:hover{
-            background-color: #169e25;
-            color: white;
-        }
-
-        .button-dashboard {
-            /* Variables */
-        --button_radius: 0.75em;
-        --button_color: #18c42c;
-        /* 25a04e */
-        --button_outline_color: #000000;
-        font-size: 17px;
-        font-weight: bold;
-        border: none;
-        border-radius: var(--button_radius);
-        background: var(--button_outline_color);
-        }
-        
-        .button_top {
-        display: block;
-        box-sizing: border-box;
-        border: 2px solid var(--button_outline_color);
-        border-radius: var(--button_radius);
-        padding: 0.75em 1.5em;
-        background: var(--button_color);
-        color: var(--button_outline_color);
-        transform: translateY(-0.2em);
-        transition: transform 0.1s ease;
-        }
-        
-        .button-dashboard:hover .button_top {
-            /* Pull the button upwards when hovered */
-        transform: translateY(-0.33em);
-        }
-        
-        .button-dashboard:active .button_top {
-            /* Push the button downwards when pressed */
-        transform: translateY(0);
-        }
-
-/* ==== Data Pribadi ==== */
-        
-    /* icon position */
-    .container-icon-edit { position: relative; }
-.container-icon-edit img { display: block; }
-.container-icon-edit .bxs-edit { 
-    position: absolute; 
-    bottom:10%; 
-    left:60%; 
-}
-
-
-
-/* ==== Upload Bukti Bayar ==== */
-.form-upload label{
-    color: black;
-}
-
-/* ==== Preview ==== */
-
-
-/* ==== status transaksi ==== */
-
-.table-status-transaksi th{
-    color: black !important;
-    font-size: 14px !important;
-}
