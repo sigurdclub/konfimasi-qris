@@ -13,7 +13,8 @@
                             <th>NOP</th>
                             <th>NAMA SUBJEK</th>
                             <th>NAMA PENGIRIM</th>
-                            <th>NO HANDPHONE / NO WA</th>
+                            <th>NO HP / NO WA</th>
+                            {{-- <th>BUKTI BAYAR</th> --}}
                             <th>STATUS</th>
                             <th>Actions</th>
                             </tr>
@@ -24,19 +25,19 @@
                             <td>{{ $item->nama_subjek }}</td>
                             <td>{{ $item->nama_pengirim }}</td>
                             <td>{{ $item->no_hp }}</td>
+
                             <td>
                                 <span class="badge bg-label-warning me-1">{{ $item->status }}</span>
                             </td>
                             <td>
                                 <button style="font-size: 12px" type="button" class="btn btn-danger">Cancel</button>
                             </td>
-                            </tr>
 
-                            
+                            </tr>
                             <td>
-                                
-                                <img src="{{'storage/'.$item->foto_bukti_bayar}}" alt="">
+                                <img style="width: 15%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">
                             </td>
+
 
                         </tbody>
                         </table>
