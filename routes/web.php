@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\StatusTransaksiController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DataPribadiController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UploadBuktiController;
@@ -43,10 +44,12 @@ Route::controller(LoginController::class)->group(function(){
     Route::post('upload-transaksi/delete{id}', [UploadBuktiController::class, 'delete']);
     // ======== Cek Status Transaksi ======== //
     Route::get('status-transaksi', [StatusTransaksiController::class, 'statusTransaksiView'])->name('status-transaksi');
+    
     // ======== Data Pribadi ======== //
-    Route::get('/data-pribadi', function () {
-        return view('pages.data-pribadi.dataPribadi');
-    });
+
+    Route::get('data-pribadi', [DataPribadiController::class, 'dataPribadiView'])->name('data-pribadi');
+    // Update Number
+    Route::post('data-pribadi/editNumber', [DataPribadiController::class, 'editNumber'])->name('editNumber'); 
 
 
         // ======== History Transaksi ======== //
