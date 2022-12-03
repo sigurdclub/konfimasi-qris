@@ -20,6 +20,9 @@
     <link rel="stylesheet" type="text/css" href="temp_login/css/util.css">
     <link rel="stylesheet" type="text/css" href="temp_login/css/main.css">
   <!--===============================================================================================-->
+
+  <script src="https://kit.fontawesome.com/f10df6ea72.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
     
@@ -49,32 +52,32 @@
           <form class="login100-form validate-form" action="{{ url('login') }}" method="post">
             @csrf
 
-            @error('email')
+            @error('name')
               <div class="invalid-feedback">
                 {{ $message }}
               </div>
             @enderror
             <span class="login100-form-title">
-              Member Login
+              Konfirmasi QRIS Login
             </span>
 
-            <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+            <div class="wrap-input100 " >
               <input 
               type        = "text" 
-              name        = "email" 
-              value       = "{{ old('email') }}"
-              class       = "input100 @error('email') is-invalid @enderror" 
+              name        = "name" 
+              value       = "{{ old('name') }}"
+              class       = "input100 @error('name') is-invalid @enderror" 
               required 
               autofocus 
-              placeholder = "Email"
+              placeholder = "73080130050xxxxxx"
               >
               <span class="focus-input100"></span>
               <span class="symbol-input100">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <i class="fa-solid fa-user"></i>
               </span>
             </div>
 
-            <div class="wrap-input100 validate-input" data-validate = "Password is required">
+            {{-- <div class="wrap-input100 validate-input" data-validate = "Password is required">
               <input 
               name          = "password"
               type          = "password" 
@@ -86,7 +89,7 @@
               <span class="symbol-input100">
                 <i class="fa fa-lock" aria-hidden="true"></i>
               </span>
-            </div>
+            </div> --}}
             
             <div class="container-login100-form-btn">
               <button class="login100-form-btn">
