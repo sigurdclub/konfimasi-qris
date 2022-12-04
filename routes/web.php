@@ -3,6 +3,7 @@
 use App\Http\Controllers\StatusTransaksiController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataPribadiController;
+use App\Http\Controllers\HistoryTransaksiController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UploadBuktiController;
@@ -30,9 +31,10 @@ Route::controller(LoginController::class)->group(function(){
 });
         // ======== Middleware ======== //
     Route::group(['middleware' => ['auth','akses']], function(){
-        
+
         // ======== Dashboard ======== //
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
         // ======== Upload Transaksi ======== //
     Route::get('upload-transaksi', [UploadBuktiController::class, 'create'])->name('upload-transaksi');
     // Route preview transaksi
@@ -42,20 +44,18 @@ Route::controller(LoginController::class)->group(function(){
     Route::get('upload-transaksi/edit{id}', [UploadBuktiController::class, 'edit']);
     Route::post('upload-transaksi/update{id}', [UploadBuktiController::class, 'update']);
     Route::post('upload-transaksi/delete{id}', [UploadBuktiController::class, 'delete']);
+
     // ======== Cek Status Transaksi ======== //
     Route::get('status-transaksi', [StatusTransaksiController::class, 'statusTransaksiView'])->name('status-transaksi');
-    
+
     // ======== Data Pribadi ======== //
 
     Route::get('data-pribadi', [DataPribadiController::class, 'dataPribadiView'])->name('data-pribadi');
     // Update Number
-    Route::post('data-pribadi/editNumber', [DataPribadiController::class, 'editNumber'])->name('editNumber'); 
-
+    Route::post('data-pribadi/editNumber', [DataPribadiController::class, 'editNumber'])->name('editNumber');
 
         // ======== History Transaksi ======== //
-    Route::get('/history-transaksi', function () {
-        return view('pages.history-transaksi.index');
-    });
+    Route::get('history-transaksi', [HistoryTransaksiController::class, 'historyTransaksi'])->name('history-transaksi');
 
 
 });
