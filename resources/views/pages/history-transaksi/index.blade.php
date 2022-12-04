@@ -11,18 +11,20 @@
                         <thead >
                             <tr>
                             <th>NOP</th>
-                            <th>NAMA SUBJEK</th>
                             <th>NAMA PENGIRIM</th>
+                            <th>NAMA SUBJEK</th>
                             <th>NO HP / NO WA</th>
+                            <th>TANGGAL TRANSAKSI</th>
                             <th>STATUS</th>
                             </tr>
                         </thead>
                         <tbody class="table-border-bottom-0">
                             <tr>
                             <td>{{ $item->nop }}</td>
-                            <td>{{ $item->nama_subjek }}</td>
                             <td>{{ $item->nama_pengirim }}</td>
+                            <td>{{ $item->nama_subjek }}</td>
                             <td>{{ $item->no_hp }}</td>
+                            <td>{{ $item->tanggal }}</td>
 
                             <td>
                                 <span class="badge bg-label-warning me-1">{{ $item->status }}</span>
