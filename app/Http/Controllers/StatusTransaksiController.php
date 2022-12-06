@@ -12,7 +12,9 @@ class StatusTransaksiController extends Controller
     {
         // $data = UploadBukti::all();
         $nop = Auth::user()->name;
-        $data = UploadBukti::where('nop',$nop)->paginate(10);
+        $data = UploadBukti::where('nop',$nop)
+                            ->filter(request(['search']))
+                            ->paginate(10);
         return view('pages.status-transaksi.statusTransaksi', compact('data'));
     }
 

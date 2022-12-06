@@ -22,4 +22,17 @@ class UploadBukti extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function scopeFilter($query, array $filters)
+    {
+
+        $query->when($filters['search'] ?? false, function($query, $search){
+
+            return $query -> where('nop', 'like', '%' . $search . '%')
+                          -> orWhere('nama_pengirim', 'like', '%' . $search . '%')
+                          -> orWhere('nama_subjek', 'like', '%' . $search . '%')
+                          -> orWhere('tanggal', 'like', '%' . $search . '%');
+        });
+
+    }
 }

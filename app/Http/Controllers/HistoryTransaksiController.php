@@ -13,9 +13,13 @@ class HistoryTransaksiController extends Controller
     //
     public function historyTransaksi()
     {
+
         // $data = UploadBukti::all();
         $nop = Auth::user()->name;
-        $histori = UploadBukti::where('nop',$nop)->paginate(10);
+        $histori = UploadBukti::where('nop',$nop)
+                                ->filter(request(['search']))
+                                ->paginate(10);
+
         return view('pages.history-transaksi.index', compact('histori'));
     }
 }
