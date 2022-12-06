@@ -1,3 +1,8 @@
+<?php 
+
+    $access = Auth::user()->role;
+
+?>
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
         <a href="index.html" class="app-brand-link">
@@ -68,7 +73,7 @@
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
-        <!-- Dashboard -->
+        <!-- ======== Dashboard ======== -->
         <li class="menu-item active">
         <a href="/" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
@@ -77,26 +82,52 @@
             </div>
         </a>
         </li>
-
+    
 
         <li class="menu-header small text-uppercase">
         <span class="menu-header-text">Menu</span>
         </li>
-        <li class="menu-item">
-            <a href="{{ url('upload-transaksi') }}" class="menu-link ">
-            
-                <i class="menu-icon tf-icons bx bx-upload"></i>
-                <div data-i18n="Misc">Upload Bukti Transaksi</div>
-            </a>
+        
 
-        </li>
-        <li class="menu-item">
-            <a href="status-transaksi" class="menu-link ">
+        <!-- ======= Menu upload ===========  -->
+        @if ($access == "public")
+            <li class="menu-item">
+                <a href="{{ url('upload-transaksi') }}" class="menu-link ">
+                
+                    <i class="menu-icon tf-icons bx bx-upload"></i>
+                    <div data-i18n="Misc">Upload Bukti Transaksi</div>
+                </a>
+
+            </li>
+        @endif
+        
+        
+        
+        <!-- ========== Cek Status Transaksi ============  -->
+        @if ($access == "public")
             
-                <i class="menu-icon tf-icons bx bx-user-check"></i>
-                <div data-i18n="Misc"> Cek Status Transaksi</div>
-            </a>
-        </li>
+            <li class="menu-item">
+                <a href="status-transaksi" class="menu-link ">
+                
+                    <i class="menu-icon tf-icons bx bx-user-check"></i>
+                    <div data-i18n="Misc"> Cek Status Transaksi</div>
+                </a>
+            </li>
+        @endif
+
+        <!-- ========== Cek Status Transaksi ============  -->
+        @if ($access == "admin")
+            
+            <li class="menu-item">
+                <a href="verifikasi-transaksi" class="menu-link ">
+                
+                    <i class="menu-icon tf-icons bx bx-user-check"></i>
+                    <div data-i18n="Misc">Verifikasi Transaksi</div>
+                </a>
+            </li>
+        @endif
+
+        <!-- ============ History Transaksi =============  -->
         <li class="menu-item">
             <a href="/history-transaksi" class="menu-link ">
             
@@ -104,12 +135,42 @@
                 <div data-i18n="Authentications">History Transaksi</div>
             </a>
         </li>
+
+        <!-- ============ Data Pribadi =============  -->
+        @if ($access == "public")
         <li class="menu-item">
             <a href="data-pribadi" class="menu-link ">
             
                 <i class="menu-icon tf-icons bx bxs-user-account"></i>
                 <div data-i18n="Account Settings">Data Pribadi</div>
             </a>
+        </li>
+        @endif
+
+
+        
+        
+        <!-- =========== Input Data Pribadi ============  -->
+        @if ($access == "admin")
+        <li class="menu-item">
+            <a href="data-pribadi" class="menu-link ">
+                
+                <i class="menu-icon tf-icons bx bxs-user-account"></i>
+                <div data-i18n="Account Settings">Input Data Baru</div>
+            </a>
+        </li>
+        @endif
+        <!-- =========== Data Public ============  -->
+        @if ($access == "admin")
+        <li class="menu-item">
+            <a href="data-pribadi" class="menu-link ">
+                
+                <i class="menu-icon tf-icons bx bxs-user-account"></i>
+                <div data-i18n="Account Settings">Data Public</div>
+            </a>
+        </li>
+        @endif
+        
         <li class="menu-item">
             <form action="{{ url('logout') }}" method="POST">
 

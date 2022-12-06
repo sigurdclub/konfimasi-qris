@@ -1,4 +1,29 @@
 
+const select_form           = document.querySelector('.select-form');       
+
+select_form.addEventListener('change' , () => {
+
+    const form_public       = document.querySelector('.form-public');
+    const option_public     =  select_form.options[select_form.selectedIndex].text;
+// const option_admin      = document.querySelector('option-admin');
+    const form_admin        = document.querySelector('.form-admin');
+    console.log(option_public);
+    if(option_public == "Admin") {
+        form_admin.removeAttribute("style");
+        form_public.setAttribute("style","display:none");
+    }else{
+        form_public.removeAttribute("style");
+        form_admin.setAttribute("style","display:none");
+    }
+    
+
+})
+
+
+
+
+
+
 (function ($) {
     "use strict";
 
@@ -23,7 +48,7 @@
 
     $('.validate-form .input100').each(function(){
         $(this).focus(function(){
-           hideValidate(this);
+            hideValidate(this);
         });
     });
 
@@ -55,3 +80,4 @@
     
 
 })(jQuery);
+

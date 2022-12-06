@@ -19,6 +19,9 @@
   <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="temp_login/css/util.css">
     <link rel="stylesheet" type="text/css" href="temp_login/css/main.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <!--===============================================================================================-->
 
   <script src="https://kit.fontawesome.com/f10df6ea72.js" crossorigin="anonymous"></script>
@@ -45,13 +48,46 @@
           </div>
         @endif
 
-
-
-
-
-          <form class="login100-form validate-form" action="{{ url('login') }}" method="post">
+        
+        
+          <form class=" form-public login100-form validate-form" action="{{ url('login') }}" method="post">
             @csrf
 
+            @error('name')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+            @enderror
+            <span class="login100-form-title">
+              Konfirmasi QRIS Login
+            </span>
+
+            <div class="wrap-input100 " >
+              <input 
+                type        = "text" 
+                name        = "name" 
+                value       = "{{ old('name') }}"
+                class       = "input100 @error('name') is-invalid @enderror" 
+                required 
+                autofocus 
+                placeholder = "73080130050xxxxxx"
+              >
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa-solid fa-user"></i>
+              </span>
+            </div>
+            
+            <div class="container-login100-form-btn">
+              <button class="login100-form-btn">
+                Login
+              </button>
+            </div>
+          </form>
+
+          <!-- admin -->
+          <form style="display: none"   class="form-admin login100-form validate-form" action="{{ url('login/admin') }}" method="post">
+            @csrf
             @error('name')
               <div class="invalid-feedback">
                 {{ $message }}
@@ -69,7 +105,7 @@
               class       = "input100 @error('name') is-invalid @enderror" 
               required 
               autofocus 
-              placeholder = "73080130050xxxxxx"
+              placeholder = "Admin"
               >
               <span class="focus-input100"></span>
               <span class="symbol-input100">
@@ -77,7 +113,8 @@
               </span>
             </div>
 
-            {{-- <div class="wrap-input100 validate-input" data-validate = "Password is required">
+
+            <div class="wrap-input100 validate-input" data-validate = "Password is required">
               <input 
               name          = "password"
               type          = "password" 
@@ -89,7 +126,8 @@
               <span class="symbol-input100">
                 <i class="fa fa-lock" aria-hidden="true"></i>
               </span>
-            </div> --}}
+            </div>
+
             
             <div class="container-login100-form-btn">
               <button class="login100-form-btn">
@@ -97,27 +135,32 @@
               </button>
             </div>
 
-            <div class="text-center p-t-12">
-              <span class="txt1">
-                Forgot
-              </span>
-              <a class="txt2" href="#">
-                Username / Password?
-              </a>
-            </div>
-
-            <div class="text-center p-t-136">
-              <a class="txt2" href="#">
-                Create your Account
-                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-              </a>
-            </div>
           </form>
+          
+
+          
+          
+          <div style="width: 100%; display: flex; justify-content: right" >
+
+            <select style="width: 38%"  class=" select-form form-select  " aria-label=".form-select-sm example">
+                
+              <option id="warga" value="warga">Warga</option>
+              <option  id="admin" value="admin">Admin</option>
+              
+            </select>
+          </div>
+          
+          
         </div>
       </div>
     </div>
     
     
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  
 
     
   <!--===============================================================================================-->	

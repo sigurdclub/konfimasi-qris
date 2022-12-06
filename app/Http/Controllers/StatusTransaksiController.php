@@ -10,6 +10,8 @@ class StatusTransaksiController extends Controller
     public function statusTransaksiView()
     {
         $data = UploadBukti::all();
+
+        
         return view('pages.status-transaksi.statusTransaksi', compact('data'));
     }
 
