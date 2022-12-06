@@ -43,6 +43,7 @@
                         </table>
                         @endforeach
                     </div>
+                    {{$data->links()}}
                 </div>
             </div>
         </section>

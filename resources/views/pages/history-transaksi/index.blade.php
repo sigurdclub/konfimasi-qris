@@ -40,6 +40,7 @@
                         </table>
                         @endforeach
                     </div>
+                    {{$history->links()}}
                 </div>
             </div>
         </section>
