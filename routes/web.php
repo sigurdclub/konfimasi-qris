@@ -4,6 +4,7 @@ use App\Http\Controllers\StatusTransaksiController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataPribadiController;
 use App\Http\Controllers\DataPublicController;
+use App\Http\Controllers\HistoryTransaksiController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UploadBuktiController;
@@ -33,13 +34,15 @@ Route::controller(LoginController::class)->group(function(){
 });
         // ======== Middleware ======== //
     Route::group(['middleware' => ['auth','akses']], function(){
-        
+
         // ======== Dashboard ======== //
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     
+    
     // ###################### Public ##################### //
     
-    // ======== Upload Transaksi ======== //
+
+        // ======== Upload Transaksi ======== //
     Route::get('upload-transaksi', [UploadBuktiController::class, 'create'])->name('upload-transaksi');
 
 
@@ -54,10 +57,11 @@ Route::controller(LoginController::class)->group(function(){
     Route::post('upload-transaksi/delete{id}', [UploadBuktiController::class, 'delete']);
 
     
+    
     // ======== Cek Status Transaksi ======== //
     Route::get('status-transaksi', [StatusTransaksiController::class, 'statusTransaksiView'])->name('status-transaksi');
-    
-    
+
+
     // ======== Data Pribadi ======== //
     Route::get('data-pribadi', [DataPribadiController::class, 'dataPribadiView'])->name('data-pribadi');
     // Update Number
@@ -78,6 +82,10 @@ Route::controller(LoginController::class)->group(function(){
     
     // ====== verifikasi transaksi ======== //
     Route::get('verifikasi-transaksi', [VerifikasiTransaksiController::class, 'verifikasiTransaksiView'])->name('verifikasi-transaksi');
+    Route::post('data-pribadi/editNumber', [DataPribadiController::class, 'editNumber'])->name('editNumber');
+
+        // ======== History Transaksi ======== //
+    Route::get('history-transaksi', [HistoryTransaksiController::class, 'historyTransaksi'])->name('history-transaksi');
 
 
 });
