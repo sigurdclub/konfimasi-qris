@@ -64,8 +64,9 @@
                                 <th>NAMA PENGIRIM</th>
                                 <th>NAMA SUBJEK</th>
                                 <th>NO HP / NO WA</th>
+                                <th style="width: 10%">BUKTI BAYAR</th>
                                 <th>TANGGAL TRANSAKSI</th>
-                                <th>STATUS</th>
+                                
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -74,17 +75,16 @@
                                 <td>{{ $item->nama_pengirim }}</td>
                                 <td>{{ $item->nama_subjek }}</td>
                                 <td>{{ $item->no_hp }}</td>
+                                <td>
+                                    <img style="width: 80%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">
+                                </td>
+
                                 <td>{{ $item->tanggal }}</td>
 
-                                <td>
-                                    <span class="badge bg-label-warning me-1">{{ $item->status }}</span>
-                                </td>
+                    
 
                                 </tr>
-                                <td>
-                                    <img style="width: 15%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">
-                                </td>
-
+                                
 
                             </tbody>
                             </table>

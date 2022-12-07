@@ -35,9 +35,14 @@
                                 <th>NAMA SUBJEK</th>
                                 <th>NAMA PENGIRIM</th>
                                 <th>NO HP / NO WA</th>
-                                {{-- <th>BUKTI BAYAR</th> --}}
-                                <th>STATUS</th>
-                                <th>Actions</th>
+                                <th style="width: 10%">BUKTI BAYAR</th>
+                                <th >STATUS</th>
+
+                                <!-- Actions Cek -->
+                                    @if ($item->status == "pending")
+                                        <th>Actions</th> 
+                                    @endif
+
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -48,16 +53,31 @@
                                 <td>{{ $item->no_hp }}</td>
 
                                 <td>
-                                    <span class="badge bg-label-warning me-1">{{ $item->status }}</span>
-                                </td>
-                                <td>
-                                    <button style="font-size: 12px" type="button" class="btn btn-danger">Cancel</button>
+                                    <img style="width: 80%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">
                                 </td>
 
+                                @if ($item->status == "pending")
+                                    <td>
+                                        <span class="badge bg-label-warning me-1">{{ $item->status }}</span>
+                                    </td>
+                                    
+                                @else
+                                    <td>
+                                        <span class="badge bg-label-success me-1">{{ $item->status }}</span>
+                                    </td>
+                                @endif
+
+                                @if ($item->status == "pending")
+                                    <td>
+                                        <button style="font-size: 12px" type="button" class="btn btn-danger">Cancel</button>
+                                    </td>
+                                    
+                                @else
+                                    
+                                @endif
+
+                                
                                 </tr>
-                                <td>
-                                    <img style="width: 15%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">
-                                </td>
 
 
                             </tbody>

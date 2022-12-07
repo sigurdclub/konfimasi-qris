@@ -40,10 +40,11 @@
                                 type                = "text"
                                 class               = "form-control"
                                 id                  = "basic-icon-default-fullname"
-                                placeholder         = " NOP"
+                                placeholder         = "7308xxxxxxxx"
                                 aria-label          = "John Doe"
                                 name                = "nop"
                                 style               = "padding: 12px"
+                                required
                                 aria-describedby    = "basic-icon-default-fullname2"
                                 />
                             </div>
@@ -68,7 +69,8 @@
                                     aria-label          = "ACME Inc."
                                     style               = "padding: 12px"
                                     name                = "nama_subjek"
-                                    aria-describedby    = "basic-icon-default-company2"
+ 
+ required                                   aria-describedby    = "basic-icon-default-company2"
                                     />
                                 </div>
                             </div>
@@ -88,6 +90,7 @@
                                 aria-label          = "john.doe"
                                 style               = "padding: 12px"
                                 name                = "nama_pengirim"
+                                required
                                 aria-describedby    = "basic-icon-default-email2"
                                 />
                                 
@@ -112,6 +115,7 @@
                                 aria-label          = "658 799 8941"
                                 name                = "no_hp"
                                 style               = "padding: 12px"
+                                required
                                 aria-describedby    = "basic-icon-default-phone2"
                                 />
                             </div>

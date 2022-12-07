@@ -128,20 +128,34 @@
         @endif
 
         <!-- ============ History Transaksi =============  -->
-        <li class="menu-item">
-            <a href="{{ route('history-transaksi') }}" class="menu-link ">
+
+        @if ($access == "public")
+            <li class="menu-item">
+                <a href="{{ route('history-transaksi') }}" class="menu-link ">
+                
+                    <i class="menu-icon tf-icons bx bx-history"></i>
+                    <div data-i18n="Authentications">History Transaksi</div>
+                </a>
+            </li>
             
-                <i class="menu-icon tf-icons bx bx-history"></i>
-                <div data-i18n="Authentications">History Transaksi</div>
-            </a>
-        </li>
+            @else
+            {{-- <li class="menu-item">
+                <a href="{{ route('history-transaksi-admin') }}" class="menu-link ">
+                
+                    <i class="menu-icon tf-icons bx bx-history"></i>
+                    <div data-i18n="Authentications">History Transaksi</div>
+                </a>
+            </li> --}}
+            
+        @endif
+
 
         <!-- ============ Data Pribadi =============  -->
         @if ($access == "public")
         <li class="menu-item">
             <a href="{{ route('data-pribadi') }}" class="menu-link ">
             
-                <i class="menu-icon tf-icons bx bxs-user-account"></i>
+                <i class="menu-icon tf-icons bx bxs-user-rectangle"></i>
                 <div data-i18n="Account Settings">Data Pribadi</div>
             </a>
         </li>

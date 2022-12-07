@@ -15,7 +15,7 @@
                         <th>NAMA SUBJEK</th>
                         <th>NAMA PENGIRIM</th>
                         <th>NO HP / NO WA</th>
-                        {{-- <th>BUKTI BAYAR</th> --}}
+                        <th style="width: 10%">BUKTI BAYAR</th>
                         <th>STATUS</th>
                         <th>Actions</th>
                         </tr>
@@ -27,7 +27,10 @@
                         <td>{{ $item->nama_pengirim }}</td>
                         <td>{{ $item->no_hp }}</td>
 
-                        
+                        <td>
+                            <img style="width: 80%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">
+                        </td>
+                            
                         @if ($item->status == "pending")
                         
                             <td>
@@ -59,9 +62,7 @@
                         
 
                         </tr>
-                        <td>
-                            <img style="width: 15%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">
-                        </td>
+                        
 
 
                     </tbody>

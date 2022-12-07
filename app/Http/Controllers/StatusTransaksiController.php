@@ -16,8 +16,9 @@ class StatusTransaksiController extends Controller
         $data = UploadBukti::where('nop',$nop)
                                 ->filter(request(['search']))
                                 ->paginate(5);
+        $access = Auth::user()->role;
 
-        return view('pages.status-transaksi.statusTransaksi', compact('data'));
+        return view('pages.status-transaksi.statusTransaksi', compact('data','access'));
 
     }
 

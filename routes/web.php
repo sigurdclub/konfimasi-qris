@@ -84,6 +84,9 @@ Route::controller(LoginController::class)->group(function(){
     
     // ======== History Transaksi ======== //
     Route::get('history-transaksi', [HistoryTransaksiController::class, 'historyTransaksi'])->name('history-transaksi');
+
+    // ======== History Transaksi ======== //
+    Route::get('history-transaksi-admin', [HistoryTransaksiController::class, 'historyTransaksi'])->name('history-transaksi-admin');
     
     
     // ##################### admin ########################//
