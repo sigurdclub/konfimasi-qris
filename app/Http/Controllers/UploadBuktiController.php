@@ -63,16 +63,13 @@ class UploadBuktiController extends Controller
     }
 
     //Method view form edit data
-    public function edit($id)
-    {
-        $model = UploadBukti::find($id);
-        return view('pages.upload-transaksi.edit', compact('model'));
-    }
+    // public function edit($id)
+    // {
+    //     $model = UploadBukti::find($id);
+    //     return view('pages.upload-transaksi.edit', compact('model'));
+    // }
 
-    public function update(Request $request)
-    {
-        # code...
-    }
+
 
 
 }

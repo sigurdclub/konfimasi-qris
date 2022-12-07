@@ -10,7 +10,7 @@ class VerifikasiTransaksiController extends Controller
 {
     public function verifikasiTransaksiView()
     {
-        $all_data = UploadBukti::all();
+        $all_data = UploadBukti::all()->sortByDesc('id');
         return view('pages.verifikasi-transaksi.verifikasiTransaksi',compact('all_data'));
     }
 
@@ -21,15 +21,15 @@ class VerifikasiTransaksiController extends Controller
 
         if($get_status->status == "pending"){
             $status = "success";
-            
+
         }else{
             $status = "pending";
         }
         UploadBukti::where('id',$id)->update(['status'=>$status]);
-        
+
         return redirect()->back();
-        
+
     }
 
-    
+
 }

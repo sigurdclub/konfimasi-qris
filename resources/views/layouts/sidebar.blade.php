@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     $access = Auth::user()->role;
 
@@ -82,33 +82,33 @@
             </div>
         </a>
         </li>
-    
+
 
         <li class="menu-header small text-uppercase">
         <span class="menu-header-text">Menu</span>
         </li>
-        
+
 
         <!-- ======= Menu upload ===========  -->
         @if ($access == "public")
             <li class="menu-item">
                 <a href="{{ url('upload-transaksi') }}" class="menu-link ">
-                
+
                     <i class="menu-icon tf-icons bx bx-upload"></i>
                     <div data-i18n="Misc">Upload Bukti Transaksi</div>
                 </a>
 
             </li>
         @endif
-        
-        
-        
+
+
+
         <!-- ========== Cek Status Transaksi ============  -->
         @if ($access == "public")
-            
+
             <li class="menu-item">
                 <a href="{{ route('status-transaksi') }}" class="menu-link ">
-                
+
                     <i class="menu-icon tf-icons bx bx-user-check"></i>
                     <div data-i18n="Misc"> Cek Status Transaksi</div>
                 </a>
@@ -117,10 +117,10 @@
 
         <!-- ========== Cek Status Transaksi ============  -->
         @if ($access == "admin")
-            
+
             <li class="menu-item">
                 <a href="{{ route('verifikasi-transaksi') }}" class="menu-link ">
-                
+
                     <i class="menu-icon tf-icons bx bx-user-check"></i>
                     <div data-i18n="Misc">Verifikasi Transaksi</div>
                 </a>
@@ -132,21 +132,21 @@
         @if ($access == "public")
             <li class="menu-item">
                 <a href="{{ route('history-transaksi') }}" class="menu-link ">
-                
+
                     <i class="menu-icon tf-icons bx bx-history"></i>
                     <div data-i18n="Authentications">History Transaksi</div>
                 </a>
             </li>
-            
+
             @else
-            {{-- <li class="menu-item">
+            <li class="menu-item">
                 <a href="{{ route('history-transaksi-admin') }}" class="menu-link ">
-                
+
                     <i class="menu-icon tf-icons bx bx-history"></i>
                     <div data-i18n="Authentications">History Transaksi</div>
                 </a>
-            </li> --}}
-            
+            </li>
+
         @endif
 
 
@@ -154,7 +154,7 @@
         @if ($access == "public")
         <li class="menu-item">
             <a href="{{ route('data-pribadi') }}" class="menu-link ">
-            
+
                 <i class="menu-icon tf-icons bx bxs-user-rectangle"></i>
                 <div data-i18n="Account Settings">Data Pribadi</div>
             </a>
@@ -162,13 +162,13 @@
         @endif
 
 
-        
-        
+
+
         <!-- =========== Input Data Pribadi ============  -->
         @if ($access == "admin")
         <li class="menu-item">
             <a href="{{ route('data-public') }}" class="menu-link ">
-                
+
 
                 <i class="menu-icon tf-icons bx bxs-user-plus"></i>
                 <div data-i18n="Account Settings">Input Data Baru</div>
@@ -179,18 +179,18 @@
         @if ($access == "admin")
         <li class="menu-item">
             <a href="{{ route('data-public') }}" class="menu-link ">
-                
+
                 <i class="menu-icon tf-icons bx bxs-user-account"></i>
                 <div data-i18n="Account Settings">Data Public</div>
             </a>
         </li>
         @endif
-        
+
         <li class="menu-item">
             <form action="{{ url('logout') }}" method="POST">
 
                 {{ csrf_field() }}
-                
+
                 <div class="col-12" style="display: flex; justify-content: right;margin-top: 4%">
                     <button type="submit" name="logout" class="btn btn-primary">logout</button>
                 </div>

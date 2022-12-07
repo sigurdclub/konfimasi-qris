@@ -81,17 +81,17 @@
 
     <body id="overlay">
         <section class="container-fluid mt-2 mb-4 row" style="justify-content: center">
-        
+
             <div class="card none-border shadowBox"  style="width: 80%;margin-top:2%;margin-bottom:5%">
                 <div class="card-body">
                     <!-- Images Maros -->
                     <div style="display: flex;justify-content: center">
                         <img src="assets/img/KabupatenMaros.png" alt="" width="10%">
                     </div>
-                    
+
                     <!-- Icon Number -->
                     <article class="icon-number" style="display: flex;justify-content: center;margin: 14px;margin-top :5%">
-                    
+
                         <div>
                             <img class="rounded mx-auto d-block" src="assets/svg/circle-one.svg" alt="" width="15%">
                             <p style="color: rgb(145, 145, 145)">Isi Berkas</p>
@@ -104,11 +104,11 @@
                             <img class="rounded mx-auto d-block" src="assets/svg/circle-three.svg" alt="" width="15%">
                             <p style="color: rgb(145, 145, 145)">Submit Berkas</p>
                         </div>
-                            
-                            
+
+
                     </article>
 
-                    
+
                     <form class="mt-5" action="{{ url('upload-transaksi/store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <!-- NOP -->
@@ -137,7 +137,7 @@
                     <div class="row mb-5">
                         <label class="col-sm-2 col-form-label" for="basic-icon-default-company">Nama Subjek</label>
                         <div class="col-sm-10">
-                            
+
                             <div class="input-group input-group-merge">
                                 <span id="basic-icon-default-company2" class="input-group-text"
                                 ><i class="bx bx-buildings"></i
@@ -156,7 +156,7 @@
                                 </div>
                             </div>
                         </div>
-            
+
                         <!-- nama pengirim -->
                         <div class="row mb-5">
                             <label class="col-sm-2 col-form-label" for="basic-icon-default-email">Nama Pengirim</label>
@@ -174,12 +174,12 @@
                                 value               = "{{ $nama_pengirim }}"
                                 aria-describedby    = "basic-icon-default-email2"
                                 />
-                                
+
                             </div>
-                            
+
                         </div>
                         </div>
-                        
+
                         <!-- No Hp -->
                         <div class="row mb-5">
                         <label class="col-sm-2 form-label" for="basic-icon-default-phone">No Handphone /  No WA</label>
@@ -202,7 +202,7 @@
                             </div>
                         </div>
                         </div>
-                        
+
                         <!-- Foto Bukti Bayar -->
                         <div class="row mb-5">
                             <label class="col-sm-2 form-label" for="basic-icon-default-phone">Foto Bukti Bayar</label>
@@ -216,7 +216,7 @@
                                     type                = "file"
                                     aria-label          = "658 799 8941"
                                     name                = "foto_bukti_bayar"
-                                    
+
                                     class               = "form-control phone-mask"
                                     placeholder         = "658 799 8941"
                                     value="{{ $foto_bukti_bayar }}"
@@ -225,8 +225,8 @@
                             </div>
                         </div>
                     </div>
-                        
-                    
+
+
                     <div  style="display: flex; justify-content: end">
                         <div class="">
                             <button type="submit" class="btn btn-danger">Cancel</button>
@@ -237,14 +237,14 @@
                 </form>
                 </div>
             </div>
-            
-            {{-- {{ $nop }} --}}
-            
-            
-        </section>
-    
 
-        
+            {{-- {{ $nop }} --}}
+
+
+        </section>
+
+
+
 
 
         <!-- Core JS -->
