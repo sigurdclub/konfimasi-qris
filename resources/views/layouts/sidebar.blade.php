@@ -5,7 +5,7 @@
 ?>
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-        <a href="index.html" class="app-brand-link">
+        <a href="/" class="app-brand-link">
         <span class="app-brand-logo demo">
             <svg
             width="25"
@@ -61,7 +61,7 @@
             </g> --}}
             </svg>
         </span>
-        <img src="assets/img/KabupatenMaros.png" class="" alt="..." width="20%">
+        <img src="{{ asset('assets/img/KabupatenMaros.png') }}" class="" alt="..." width="20%">
         <span class="app-brand-text  menu-text fw-bolder ms-2">Bapenda Maros</span>
         </a>
 
@@ -107,7 +107,7 @@
         @if ($access == "public")
             
             <li class="menu-item">
-                <a href="status-transaksi" class="menu-link ">
+                <a href="{{ route('status-transaksi') }}" class="menu-link ">
                 
                     <i class="menu-icon tf-icons bx bx-user-check"></i>
                     <div data-i18n="Misc"> Cek Status Transaksi</div>
@@ -119,7 +119,7 @@
         @if ($access == "admin")
             
             <li class="menu-item">
-                <a href="verifikasi-transaksi" class="menu-link ">
+                <a href="{{ route('verifikasi-transaksi') }}" class="menu-link ">
                 
                     <i class="menu-icon tf-icons bx bx-user-check"></i>
                     <div data-i18n="Misc">Verifikasi Transaksi</div>
@@ -129,7 +129,7 @@
 
         <!-- ============ History Transaksi =============  -->
         <li class="menu-item">
-            <a href="/history-transaksi" class="menu-link ">
+            <a href="{{ route('history-transaksi') }}" class="menu-link ">
             
                 <i class="menu-icon tf-icons bx bx-history"></i>
                 <div data-i18n="Authentications">History Transaksi</div>
@@ -139,7 +139,7 @@
         <!-- ============ Data Pribadi =============  -->
         @if ($access == "public")
         <li class="menu-item">
-            <a href="data-pribadi" class="menu-link ">
+            <a href="{{ route('data-pribadi') }}" class="menu-link ">
             
                 <i class="menu-icon tf-icons bx bxs-user-account"></i>
                 <div data-i18n="Account Settings">Data Pribadi</div>
@@ -153,9 +153,10 @@
         <!-- =========== Input Data Pribadi ============  -->
         @if ($access == "admin")
         <li class="menu-item">
-            <a href="data-pribadi" class="menu-link ">
+            <a href="{{ route('data-public') }}" class="menu-link ">
                 
-                <i class="menu-icon tf-icons bx bxs-user-account"></i>
+
+                <i class="menu-icon tf-icons bx bxs-user-plus"></i>
                 <div data-i18n="Account Settings">Input Data Baru</div>
             </a>
         </li>
@@ -163,7 +164,7 @@
         <!-- =========== Data Public ============  -->
         @if ($access == "admin")
         <li class="menu-item">
-            <a href="data-pribadi" class="menu-link ">
+            <a href="{{ route('data-public') }}" class="menu-link ">
                 
                 <i class="menu-icon tf-icons bx bxs-user-account"></i>
                 <div data-i18n="Account Settings">Data Public</div>

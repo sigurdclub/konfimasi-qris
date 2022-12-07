@@ -4,6 +4,7 @@
         <article class="container-fluid mt-4">
             
 
+          
             @foreach ($userData as $item)
             
             <!-- Image Profile -->
@@ -12,7 +13,7 @@
                         <article style="display:flex ; ">
                             <div class="container-icon-edit">
                                 <i class='bx bxs-edit' style="color: black;font-size: 30px"></i>
-                                <img src="assets/img/profile icon.png" class="rounded mx-auto d-block" alt="..." width="35%">
+                                <img src="{{ asset('assets/img/profile icon.png') }}" class="rounded mx-auto d-block" alt="..." width="35%">
                             </div>
                             <div style="margin-top: 10%">
                                 <h3 style="font-family: code;color:black"> {{$item->NM_WP}} </h3>
@@ -181,6 +182,11 @@
                 </section>
 
                 @endforeach
+         
+           
+
+               
+
 
         </article>
     @endsection

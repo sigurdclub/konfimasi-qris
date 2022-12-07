@@ -37,7 +37,7 @@ Route::controller(LoginController::class)->group(function(){
 
         // ======== Dashboard ======== //
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    
+
     
     // ###################### Public ##################### //
     
@@ -64,6 +64,15 @@ Route::controller(LoginController::class)->group(function(){
 
     // ======== Data Pribadi ======== //
     Route::get('data-pribadi', [DataPribadiController::class, 'dataPribadiView'])->name('data-pribadi');
+    
+    // Get id
+    Route::get('data-pribadi/{id}', [DataPribadiController::class, 'dataPribadiAdmin'])->name('data-pribadi/{id}');
+
+
+    
+    // update all Data
+    Route::post('data-pribadi/update', [DataPribadiController::class, 'updateDataPribadi'])->name('data-pribadi/update');
+    
     // Update Number
     Route::post('data-pribadi/editNumber', [DataPribadiController::class, 'editNumber'])->name('editNumber'); 
     
@@ -73,6 +82,8 @@ Route::controller(LoginController::class)->group(function(){
     });
     
     
+    // ======== History Transaksi ======== //
+    Route::get('history-transaksi', [HistoryTransaksiController::class, 'historyTransaksi'])->name('history-transaksi');
     
     
     // ##################### admin ########################//
@@ -82,10 +93,8 @@ Route::controller(LoginController::class)->group(function(){
     
     // ====== verifikasi transaksi ======== //
     Route::get('verifikasi-transaksi', [VerifikasiTransaksiController::class, 'verifikasiTransaksiView'])->name('verifikasi-transaksi');
-    Route::post('data-pribadi/editNumber', [DataPribadiController::class, 'editNumber'])->name('editNumber');
+    Route::get('verifikasi-transaksi/change-status/{id}', [VerifikasiTransaksiController::class, 'changeStatus'])->name('change-status');
 
-        // ======== History Transaksi ======== //
-    Route::get('history-transaksi', [HistoryTransaksiController::class, 'historyTransaksi'])->name('history-transaksi');
 
 
 });

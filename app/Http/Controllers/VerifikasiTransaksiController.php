@@ -11,9 +11,24 @@ class VerifikasiTransaksiController extends Controller
     public function verifikasiTransaksiView()
     {
         $all_data = UploadBukti::all();
-
-        
         return view('pages.verifikasi-transaksi.verifikasiTransaksi',compact('all_data'));
+    }
+
+    public function changeStatus($id)
+    {
+        $get_status = UploadBukti::select('status')->where('id',$id)->first();
+
+
+        if($get_status->status == "pending"){
+            $status = "success";
+            
+        }else{
+            $status = "pending";
+        }
+        UploadBukti::where('id',$id)->update(['status'=>$status]);
+        
+        return redirect()->back();
+        
     }
 
     

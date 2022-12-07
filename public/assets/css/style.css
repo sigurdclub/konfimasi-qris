@@ -3,6 +3,10 @@
             font-family: code;
             src: url(/assets/font/CodeNext-Trial-SemiBold.otf);
         }
+        @font-face {
+            font-family: cool;
+            src: url(/assets/font/coolvetica-condensed-rg.otf);
+        }
 
         a {
             text-decoration: unset;

@@ -1,27 +1,25 @@
     <!-- build:js assets/vendor/js/core.js -->
     
-    <script src="
-    template/assets/vendor/libs/jquery/jquery.js
-    "></script>
+    <script src="{{ asset('template/assets/vendor/libs/jquery/jquery.js"') }}"></script>
 
-    <script src="template/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="{{ asset('template/assets/vendor/libs/jquery/jquery.js"') }}"></script>
 
-    <script src="template/assets/vendor/libs/popper/popper.js"></script>
-    <script src="template/assets/vendor/js/bootstrap.js"></script>
-    <script src="template/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="{{ asset('template/assets/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ asset('template/assets/vendor/js/bootstrap.js')}}"></script>
+    <script src="{{ asset('template/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
 
-    <script src="template/assets/vendor/js/menu.js"></script>
+    <script src="{{ asset('template/assets/vendor/js/menu.js') }}"></script>
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="template/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="{{ asset('template/assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
 
     <!-- Main JS -->
-    <script src="template/assets/js/main.js"></script>
+    <script src="{{ asset('template/assets/js/main.js') }}"></script>
 
     <!-- Page JS -->
     <!-- Page JS -->
-    <script src="template/assets/js/dashboards-analytics.js"></script>
+    <script src="{{ asset('template/assets/js/dashboards-analytics.js') }}"></script>
 
     <!-- Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
