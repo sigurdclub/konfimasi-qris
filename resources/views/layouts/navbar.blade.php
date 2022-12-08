@@ -57,12 +57,12 @@
                                                     {{ Auth::user()->name }}
                                             </span>
                                         @else
-                                        @foreach ($userData as $item)
+                                        {{-- @foreach ($userData as $item)
                                             <span class="fw-semibold d-block">
                                                 {{ $item->NM_WP }}
                                                     
                                             </span>
-                                        @endforeach
+                                        @endforeach --}}
 
                                         @endif
                                         <small class="text-muted">{{ Auth::user()->role }}</small>
