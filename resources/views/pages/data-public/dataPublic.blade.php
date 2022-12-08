@@ -7,7 +7,7 @@
 
         {{-- Search --}}
             <div class="row justify-content-end mb-3">
-                <div class="col-md-4 ">
+                <div class="">
                     <form action="{{ url('data-public') }}">
 
                         {{ csrf_field() }}
@@ -16,11 +16,12 @@
                             <input
                             type="text"
                             class="form-control"
-                            placeholder="Search..."
-                            aria-label="Search..."
+                            placeholder="Pencarian..."
+                            aria-label="Pencarian..."
+                            style="width: 30%;margin:12px"
                             name="search" value="{{ request('search') }}">
 
-                            <button class="btn btn-outline-info" type="submit" >Search</button>
+                            <button style="margin: 12px" class="btn btn-outline-success" type="submit" ><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </form>
                 </div>
@@ -29,7 +30,7 @@
         @if(count($data_public) > 0)
         @foreach ($data_public as $item)
 
-        <div class="card mt-3" style="width: 18rem;">
+        <div class="card mt-4" style="width: 18rem;">
             <img src="assets/img/profile icon.png" width="50%" class="rounded mx-auto d-block m-3" alt="...">
             <div class="card-body">
                 <h5 style="text-align: center;color: black" class="card-title">{{ $item->SUBJEK_PAJAK_ID }}</h5>
@@ -66,7 +67,7 @@
         @endif
 
     </section>
-    <div class="d-flex justify-content-end mt-2">
+    <div class="d-flex justify-content-end " style="margin: 2em">
         {{$data_public->links()}}
     </div>
     @endsection

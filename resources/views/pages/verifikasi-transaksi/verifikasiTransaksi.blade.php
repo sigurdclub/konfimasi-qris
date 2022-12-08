@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="container-fluid mt-2 row" style="justify-content: center">
-        <h4 style="margin-top:2%;color:black;font-family:'Times New Roman', Times, serif;font-size: 32px">Verifikasi Transaksi</h4>
+        <h4 style="margin-top:2%;color:black;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 32px">Verifikasi Transaksi</h4>
         <div class="card none-border"  style="width: 100%;margin-top:2%">
             <div class="card-body">
                 <div class="table-responsive text-nowrap">

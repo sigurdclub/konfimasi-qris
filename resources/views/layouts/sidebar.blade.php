@@ -186,19 +186,6 @@
         </li>
         @endif
 
-        <li class="menu-item">
-            <form action="{{ url('logout') }}" method="POST">
-
-                {{ csrf_field() }}
-
-                <div class="col-12" style="display: flex; justify-content: right;margin-top: 4%">
-                    <button type="submit" name="logout" class="btn btn-primary">logout</button>
-                </div>
-                    {{-- <i class="menu-icon tf-icons bx bxs-user-account"></i>
-                    <div data-i18n="Account Settings">Logout</div> --}}
-
-            </form>
-        </li>
-
+        
     </ul>
     </aside>

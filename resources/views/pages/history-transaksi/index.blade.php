@@ -5,7 +5,7 @@
             <h4 style="margin-top:2%;color:black;font-family: code">History Transaksi</h4>
             {{-- Search --}}
             <div class="row justify-content-end mb-3">
-                <div class="col-md-4 ">
+                <div class="">
                     <form action="{{ url('history-transaksi') }}">
 
                         {{ csrf_field() }}
@@ -14,11 +14,12 @@
                             <input
                             type="text"
                             class="form-control"
-                            placeholder="Search..."
-                            aria-label="Search..."
+                            placeholder="Pencarian..."
+                            aria-label="Pencarian..."
+                            style="width: 30%;margin:12px"
                             name="search" value="{{ request('search') }}">
 
-                            <button class="btn btn-outline-info" type="submit" >Search</button>
+                            <button style="margin: 12px" class="btn btn-outline-success" type="submit" ><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </form>
                 </div>
@@ -59,7 +60,7 @@
                             @foreach ($histori as $item)
                             <table class="table table-history-transaksi">
                             <thead >
-                                <tr>
+                                <tr style="border: 1px solid #18c42c">
                                 <th>NOP</th>
                                 <th>NAMA PENGIRIM</th>
                                 <th>NAMA SUBJEK</th>
