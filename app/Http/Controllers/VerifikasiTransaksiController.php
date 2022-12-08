@@ -10,7 +10,8 @@ class VerifikasiTransaksiController extends Controller
 {
     public function verifikasiTransaksiView()
     {
-        $all_data = UploadBukti::all()->sortByDesc('id');
+        // $all_data = UploadBukti::all()->sortByDesc('id');
+        $all_data = DB::table('upload_bukti_bayar')->orderBy('id', 'desc')->paginate(5);
         return view('pages.verifikasi-transaksi.verifikasiTransaksi',compact('all_data'));
     }
 

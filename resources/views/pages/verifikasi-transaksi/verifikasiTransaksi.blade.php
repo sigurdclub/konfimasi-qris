@@ -6,7 +6,7 @@
         <div class="card none-border"  style="width: 100%;margin-top:2%">
             <div class="card-body">
                 <div class="table-responsive text-nowrap">
-                    
+
                     @foreach ($all_data as $item)
                     <table class="table table-status-transaksi">
                     <thead >
@@ -30,9 +30,9 @@
                         <td>
                             <img style="width: 80%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">
                         </td>
-                            
+
                         @if ($item->status == "pending")
-                        
+
                             <td>
                                 <span class="badge bg-label-warning me-1">{{ $item->status }}</span>
                             </td>
@@ -46,28 +46,29 @@
                         @if ($item->status == "pending")
                             <td>
                                 <a href="{{ url('verifikasi-transaksi/change-status/'.$item->id) }}">
-                                
+
                                     <button style="font-size: 12px" type="button" class="btn btn-success"><i style="font-size: 20px" class="fa-solid fa-thumbs-up"></i></button>
                                 </a>
                             </td>
                         @else
                             <td>
                                 {{-- <a href="{{ url('verifikasi-transaksi/change-status/'.$item->id) }}">
-                                
+
                                     <button style="font-size: 12px" type="button" class="btn btn-success"><i style="font-size: 20px" class="fa-solid fa-thumbs-up"></i></button>
                                 </a> --}}
                                 <span style="font-style: italic" class="badge bg-label-secondary me-1">Verified <i class="fa-solid fa-check"></i></span>
                             </td>
                         @endif
-                        
 
                         </tr>
-                        
 
 
                     </tbody>
                     </table>
                     @endforeach
+                </div>
+                <div class="d-flex justify-content-end">
+                    {{$all_data->links()}}
                 </div>
             </div>
         </div>

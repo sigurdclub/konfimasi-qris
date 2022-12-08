@@ -14,13 +14,13 @@ class DataPribadiController extends Controller
     // ====== Data Pribadi View ======== //
     public function dataPribadiView() {
 
-        
-        
+
+
         $nop        = Auth::user()->name;
-        
+
         $userData   = DataSubjekPajak::where('SUBJEK_PAJAK_ID',$nop)->get();
 
-        
+
 
         return view('pages.data-pribadi.dataPribadi',compact('userData'));
     }
@@ -36,20 +36,16 @@ class DataPribadiController extends Controller
 
     }
 
-    
+
     // Edit Number
     public function editNumber(Request $request) {
 
-        // $nop = Auth::user()->name;
-        // $no_telp = $request->TELP_WP;
-        // $userData = DataSubjekPajak::where('SUBJEK_PAJAK_ID', $nop)->first(['TELP_WP','id']);
-        // $userData = $no_telp;
-        // // $data_user = DataSubjekPajak::find($nop);
-        // // dd($userData);
-        // $userData->save();
-        // return redirect('status-transaksi');
-        
-        
+        DataSubjekPajak::where('id', $request->id)->update([
+                            'TELP_WP' => $request->TELP_WP,
+                        ]);
+
+        return redirect('data-pribadi');
+
 
     }
 
@@ -64,15 +60,29 @@ class DataPribadiController extends Controller
             'KELURAHAN_WP'      => $request->KELURAHAN_WP,
             'KOTA_WP'           => $request->KOTA_WP,
             'TELP_WP'           => $request->TELP_WP,
-            
+
 
         ]);
 
         return redirect()->route('data-public');
-        
+
     }
 
+    public function deleteDataPribadi($id)
+    {
 
+        // $data = DB::table('dat_subjek_pajak')->where($id);
+        // dd($data);
+        // $data->delete();
+
+
+        DataSubjekPajak::where($id)->dd();
+
+        return redirect()->route('data-public');
+
+
+
+    }
 
 
 }

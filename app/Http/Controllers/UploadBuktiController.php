@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\UploadBukti;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 
 class UploadBuktiController extends Controller
@@ -62,10 +64,7 @@ class UploadBuktiController extends Controller
         return redirect('/history-transaksi');
     }
 
-    public function cancelTransaksi($id)
-    {
-        UploadBukti::find($id)->delete();
-    }
+
 
 
 

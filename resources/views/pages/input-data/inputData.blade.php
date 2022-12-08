@@ -7,7 +7,7 @@
         <hr>
 
         <!--  -->
-        <form action="data-pribadi/editNumber" method="POST">
+        <form action="{{ route('data-public') }}" method="POST">
             @csrf
         <section class="row">
             <div class="card none-border" style="width: 20%;">
@@ -17,7 +17,7 @@
             </div>
             <div class="card none-border" style="width: 80%;">
                 <div class="card-body">
-                    
+
                         <!-- Section Name and -->
                         <section class="row" >
                             <div class="card none-border" style="width: 100%;">
@@ -44,7 +44,7 @@
                             </div>
                             <div class="card none-border" style="width: 100%;">
                                 <div class="card-body">
-                                    <label class="form-label" for="basic-icon-default-company">Nama </label>
+                                    <label class="form-label" for="basic-icon-default-company">Nama Subjek </label>
                                     <div class="input-group input-group-merge">
                                         <span id="basic-icon-default-company2" class="input-group-text">
                                             <i class="bx bxs-user-detail"></i>
@@ -55,6 +55,7 @@
                                             class               = "form-control"
                                             style               = "padding: 12px"
                                             value               = ""
+                                            name                = "NM_WP"
                                             aria-label          = "ACME Inc."
                                             placeholder         = "ACME Inc."
                                             aria-describedby    = "basic-icon-default-company2"
@@ -66,7 +67,7 @@
                         <section class="row" >
                             <div class="card none-border" style="width: 100%;">
                                 <div class="card-body">
-                                    <label class="form-label" for="basic-icon-default-company">Telpon</label>
+                                    <label class="form-label" for="basic-icon-default-company">Alamat</label>
                                     <div class="input-group input-group-merge">
                                         <span id="basic-icon-default-company2" class="input-group-text"><i class="bx bxs-phone"></i></span>
                                         <input
@@ -76,7 +77,7 @@
                                             class               = "form-control"
                                             value               = ""
                                             aria-label          = "ACME Inc."
-                                            name                = "TELP_WP"
+                                            name                = "JALAN_WP"
                                             placeholder         = "ACME Inc."
                                             aria-describedby    = "basic-icon-default-company2"
                                         />
@@ -88,25 +89,19 @@
                 </div>
             </section>
 
-
-
-
             <section class="row">
                 <div class="card none-border" style="width: 20%;">
                     <div class="card-body">
-                        <h5 style="text-align: end" class="card-title">Alamat</h5>
+                        <h5 style="text-align: end" class="card-title"></h5>
                     </div>
                 </div>
                 <div class="card none-border" style="width: 80%;">
                     <div class="card-body  pt-0">
-                        
-                          
-    
                             <!-- Section Name and -->
                             <section class="row" >
                                 <div class="card none-border" style="width: 100%;">
                                     <div class="card-body">
-                                        <label class="form-label" for="basic-icon-default-fullname">Jalan </label>
+                                        <label class="form-label" for="basic-icon-default-fullname">Blok Kav </label>
                                         <div class="input-group input-group-merge">
                                             <span id="basic-icon-default-fullname2" class="input-group-text">
                                                 <i class="fa-solid fa-location-dot"></i>
@@ -117,7 +112,7 @@
                                                 class               = "form-control"
                                                 value               = ""
                                                 style               = "padding: 12px"
-                        
+                                                name                = "BLOK_KAV_NO_WP"
                                                 aria-label          = "John Doe"
                                                 placeholder         = "John Doe"
                                                 aria-describedby    = "basic-icon-default-fullname2"
@@ -125,10 +120,10 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="card none-border" style="width: 100%;">
                                     <div class="card-body">
-                                        <label class="form-label" for="basic-icon-default-company">Kelurahan </label>
+                                        <label class="form-label" for="basic-icon-default-company">RW </label>
                                 <div class="input-group input-group-merge">
                                     <span id="basic-icon-default-company2" class="input-group-text"
                                     ><i class="fa-solid fa-warehouse"></i></i
@@ -139,7 +134,7 @@
                                         class               = "form-control"
                                         style               = "padding: 12px"
                                         value               = ""
-                
+                                        name                = "RW_WP"
                                         aria-label          = "ACME Inc."
                                         placeholder         = "ACME Inc."
                                         aria-describedby    = "basic-icon-default-company2"
@@ -148,8 +143,54 @@
                                     </div>
                                 </div>
                             </section>
-    
+
                             <!-- Section Name and -->
+                            <section class="row" >
+                                <div class="card none-border" style="width: 100%;">
+                                    <div class="card-body">
+                                        <label class="form-label" for="basic-icon-default-fullname">RT</label>
+                                    <div class="input-group input-group-merge">
+                                        <span id="basic-icon-default-fullname2" class="input-group-text"
+                                        ><i class="fa-solid fa-city"></i></i
+                                        ></span>
+                                        <input
+                                            id                  = "basic-icon-default-fullname"
+                                            type                = "text"
+                                            class               = "form-control"
+                                            value               = ""
+                                            style               ="padding: 12px"
+                                            name                = "RT_WP"
+                                            aria-label          = "John Doe"
+                                            placeholder         = "John Doe"
+                                            aria-describedby    = "basic-icon-default-fullname2"
+                                        />
+                                    </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row" >
+                                <div class="card none-border" style="width: 100%;">
+                                    <div class="card-body">
+                                        <label class="form-label" for="basic-icon-default-fullname">Kelurahan</label>
+                                    <div class="input-group input-group-merge">
+                                        <span id="basic-icon-default-fullname2" class="input-group-text"
+                                        ><i class="fa-solid fa-city"></i></i
+                                        ></span>
+                                        <input
+                                            id                  = "basic-icon-default-fullname"
+                                            type                = "text"
+                                            class               = "form-control"
+                                            value               = ""
+                                            style               ="padding: 12px"
+                                            name                = "KELURAHAN_WP"
+                                            aria-label          = "John Doe"
+                                            placeholder         = "John Doe"
+                                            aria-describedby    = "basic-icon-default-fullname2"
+                                        />
+                                    </div>
+                                    </div>
+                                </div>
+                            </section>
                             <section class="row" >
                                 <div class="card none-border" style="width: 100%;">
                                     <div class="card-body">
@@ -164,7 +205,7 @@
                                             class               = "form-control"
                                             value               = ""
                                             style               ="padding: 12px"
-                    
+                                            name                = "KOTA_WP"
                                             aria-label          = "John Doe"
                                             placeholder         = "John Doe"
                                             aria-describedby    = "basic-icon-default-fullname2"
@@ -173,9 +214,102 @@
                                     </div>
                                 </div>
                             </section>
-                            
-    
-                            
+                            <section class="row" >
+                                <div class="card none-border" style="width: 100%;">
+                                    <div class="card-body">
+                                        <label class="form-label" for="basic-icon-default-fullname">Kode Pos</label>
+                                    <div class="input-group input-group-merge">
+                                        <span id="basic-icon-default-fullname2" class="input-group-text"
+                                        ><i class="fa-solid fa-city"></i></i
+                                        ></span>
+                                        <input
+                                            id                  = "basic-icon-default-fullname"
+                                            type                = "text"
+                                            class               = "form-control"
+                                            value               = ""
+                                            style               ="padding: 12px"
+                                            name                = "KD_POS_WP"
+                                            aria-label          = "John Doe"
+                                            placeholder         = "John Doe"
+                                            aria-describedby    = "basic-icon-default-fullname2"
+                                        />
+                                    </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row" >
+                                <div class="card none-border" style="width: 100%;">
+                                    <div class="card-body">
+                                        <label class="form-label" for="basic-icon-default-fullname">Telp</label>
+                                    <div class="input-group input-group-merge">
+                                        <span id="basic-icon-default-fullname2" class="input-group-text"
+                                        ><i class="fa-solid fa-city"></i></i
+                                        ></span>
+                                        <input
+                                            id                  = "basic-icon-default-fullname"
+                                            type                = "text"
+                                            class               = "form-control"
+                                            value               = ""
+                                            style               ="padding: 12px"
+                                            name                = "TELP_WP"
+                                            aria-label          = "John Doe"
+                                            placeholder         = "John Doe"
+                                            aria-describedby    = "basic-icon-default-fullname2"
+                                        />
+                                    </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="row" >
+                                <div class="card none-border" style="width: 100%;">
+                                    <div class="card-body">
+                                        <label class="form-label" for="basic-icon-default-fullname">NPWP</label>
+                                    <div class="input-group input-group-merge">
+                                        <span id="basic-icon-default-fullname2" class="input-group-text"
+                                        ><i class="fa-solid fa-city"></i></i
+                                        ></span>
+                                        <input
+                                            id                  = "basic-icon-default-fullname"
+                                            type                = "text"
+                                            class               = "form-control"
+                                            value               = ""
+                                            style               ="padding: 12px"
+                                            name                = "NPWP"
+                                            aria-label          = "John Doe"
+                                            placeholder         = "John Doe"
+                                            aria-describedby    = "basic-icon-default-fullname2"
+                                        />
+                                    </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row" >
+                                <div class="card none-border" style="width: 100%;">
+                                    <div class="card-body">
+                                        <label class="form-label" for="basic-icon-default-fullname">Status Pekerjaan</label>
+                                    <div class="input-group input-group-merge">
+                                        <span id="basic-icon-default-fullname2" class="input-group-text"
+                                        ><i class="fa-solid fa-city"></i></i
+                                        ></span>
+                                        <input
+                                            id                  = "basic-icon-default-fullname"
+                                            type                = "text"
+                                            class               = "form-control"
+                                            value               = ""
+                                            style               ="padding: 12px"
+                                            name                = "STATUS_PEKERJAAN_WP"
+                                            aria-label          = "John Doe"
+                                            placeholder         = "John Doe"
+                                            aria-describedby    = "basic-icon-default-fullname2"
+                                        />
+                                    </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+
                         </div>
                     </div>
                 </section>
@@ -183,7 +317,9 @@
                 <section style="display: flex; justify-content: end;margin-top:2%;margin-bottom:5%">
                     <div>
 
-                        <button type="submit" class="btn btn-secondary" >cancel</button>
+                        <a href="{{ url('dataa-public/add-subjekpajak') }}">
+                            <button type="submit" class="btn btn-secondary" >cancel</button>
+                        </a>
                         <button type="submit" class="btn button-color" >Save</button>
                     </div>
                 </section>

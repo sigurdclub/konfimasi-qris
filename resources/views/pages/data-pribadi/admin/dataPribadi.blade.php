@@ -2,10 +2,10 @@
 
 @section('content')
     <article class="container-fluid mt-4">
-        
 
-       
-        
+
+
+
         <!-- Image Profile -->
             <div class="card none-border" style="width: 30rem;">
                 <div class="card-body">
@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            
+
             <!-- Form  -->
             <section style="display: flex; justify-content: center">
 
@@ -30,7 +30,7 @@
                     <div class="card-body">
                         <form action="{{ route('data-pribadi/update') }}" method="POST">
                             @csrf
-                        
+
                             <!-- Section Name and -->
                             <section class="row" >
                                 <div class="card none-border" style="width: 28rem;">
@@ -48,7 +48,7 @@
                                                 style                   = "padding: 12px"
                                                 value                   = "{{ $singleData->SUBJEK_PAJAK_ID }}"
                                                 name                    = "SUBJEK_PAJAK_ID"
-                                                
+
                                                 aria-label              = "John Doe"
                                                 placeholder             = "John Doe"
                                                 aria-describedby        = "basic-icon-default-fullname2"
@@ -71,7 +71,7 @@
                                                 value               = "{{ $singleData->NM_WP }}"
                                                 name                = "NM_WP"
                                                 aria-label          = "ACME Inc."
-                                                
+
                                                 placeholder         = "ACME Inc."
                                                 aria-describedby    = "basic-icon-default-company2"
                                             />
@@ -96,7 +96,7 @@
                                                 value               = "{{ $singleData->JALAN_WP }}"
                                                 style               = "padding: 12px"
                                                 name                = "JALAN_WP"
-                                                
+
                                                 aria-label          = "John Doe"
                                                 placeholder         = "John Doe"
                                                 aria-describedby    = "basic-icon-default-fullname2"
@@ -119,7 +119,7 @@
                                         style               = "padding: 12px"
                                         value               = "{{ $singleData->KELURAHAN_WP }}"
                                         name                = "KELURAHAN_WP"
-                                        
+
                                         aria-label          = "ACME Inc."
                                         placeholder         = "ACME Inc."
                                         aria-describedby    = "basic-icon-default-company2"
@@ -145,7 +145,7 @@
                                             value               = "{{ $singleData->KOTA_WP }}"
                                             style               ="padding: 12px"
                                             name                = "KOTA_WP"
-                                            
+
                                             aria-label          = "John Doe"
                                             placeholder         = "John Doe"
                                             aria-describedby    = "basic-icon-default-fullname2"
@@ -179,6 +179,15 @@
                             <section style="display: flex; justify-content: center;margin-top:2%">
                                 <button type="submit" class="btn btn-primary" style="width: 30% ;background-color: #18c42c;border: 1px black solid">Save</button>
                             </section>
+                            <!-- button save -->
+                            <section >
+                                <a href="{{url('data-pribadi/delete'.$singleData->id)}}">
+
+                                    <button type="submit" class="btn btn-danger" style="width: 30% ;background-color: #18c42c;border: 1px black solid">Delete</button>
+
+                                </a>
+
+                            </section>
 
                         </form>
                     </div>
@@ -186,9 +195,9 @@
             </section>
 
 
-       
 
-           
+
+
 
 
     </article>

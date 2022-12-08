@@ -3,7 +3,7 @@
     @section('content')
         <section class="container-fluid mt-2 row" style="justify-content: center">
             <h4 style="margin-top:2%;color:black;font-family: code">Status Transaksi</h4>
-            {{-- Search --}}
+                             {{-- Search --}}
             <div class="row justify-content-end mb-3">
                 <div class="col-md-4">
                     <form action="{{ url('status-transaksi') }}">
@@ -69,7 +69,7 @@
 
                                 @if ($item->status == "pending")
                                     <td>
-                                        <a href="{{ url('status-transaksi/cancel'.'/'.$item->id) }}">
+                                        <a href="{{url('status-transaksi/delete'.$item->id)}}">
 
                                             <button style="font-size: 12px" type="button" class="btn btn-danger">Cancel</button>
 
@@ -93,7 +93,7 @@
                     </div>
                     <div class="d-flex justify-content-end">
                         {{$data->links()}}
-                     </div>
+                    </div>
                 </div>
             </div>
         </section>

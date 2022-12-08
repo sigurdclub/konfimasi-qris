@@ -23,7 +23,9 @@ class DataSubjekPajak extends Model
         'KD_POS_WP',
         'TELP_WP',
         'NPWP',
-        'STATUS_PEKERJAAN_WP'
+        'STATUS_PEKERJAAN_WP',
+        'updated_at',
+        'created_at',
     ];
 
     public function scopeFilter($query, array $filters)

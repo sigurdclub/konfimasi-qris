@@ -52,12 +52,15 @@ Route::controller(LoginController::class)->group(function(){
 
     //  Route submit data
     Route::post('upload-transaksi/store', [UploadBuktiController::class, 'store'])->name('upload-transaksi/store');
-    Route::post('upload-transaksi/cancel{id}', [UploadBuktiController::class, 'cancelTransaksi'])->name('cancelTransaksi');
+
 
 
 
     // ======== Cek Status Transaksi ======== //
     Route::get('status-transaksi', [StatusTransaksiController::class, 'statusTransaksiView'])->name('status-transaksi');
+
+    Route::get('status-transaksi/delete{id}', [StatusTransaksiController::class, 'cancelTransaksi'])->name('cancelTransaksi');
+
 
 
     // ======== Data Pribadi ======== //
@@ -66,13 +69,17 @@ Route::controller(LoginController::class)->group(function(){
     // Get id
     Route::get('data-pribadi/{id}', [DataPribadiController::class, 'dataPribadiAdmin'])->name('data-pribadi/{id}');
 
-
-
     // update all Data
     Route::post('data-pribadi/update', [DataPribadiController::class, 'updateDataPribadi'])->name('data-pribadi/update');
 
     // Update Number
     Route::post('data-pribadi/editNumber', [DataPribadiController::class, 'editNumber'])->name('editNumber');
+
+    //delete
+    Route::get('data-pribadi/delete{id}', [DataPublicController::class, 'deleteDataPribadi'])->name('deleteDataPribadi');
+
+
+
 
     // ======== History Transaksi ======== //
     Route::get('/history-transaksi', function () {
@@ -91,16 +98,19 @@ Route::controller(LoginController::class)->group(function(){
 
     // ======== Data Public ======== //
     Route::get('data-public', [DataPublicController::class, 'dataPublicView'])->name('data-public');
-    // Route::get('data-public', [DataPublicController::class, 'createDataPublic'])->name('data-public');
-    Route::post('data-public', [DataPublicController::class, 'storeDataPublic'])->name('data-public');
-
     // add subjek pajak
     Route::get('add-subjekpajak', [DataPublicController::class, 'addSubjekPajak'])->name('add-subjekpajak');
+
+    Route::post('data-public', [DataPublicController::class, 'storeDataPublic'])->name('data-public');
+
+    //delete
+    // Route::get('data-public/delete{id}', [DataPublicController::class, 'deleteDataPublic'])->name('deleteDataPublic');
 
 
 
     // ====== verifikasi transaksi ======== //
     Route::get('verifikasi-transaksi', [VerifikasiTransaksiController::class, 'verifikasiTransaksiView'])->name('verifikasi-transaksi');
+
     Route::get('verifikasi-transaksi/change-status/{id}', [VerifikasiTransaksiController::class, 'changeStatus'])->name('change-status');
 
 
