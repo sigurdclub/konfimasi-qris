@@ -167,7 +167,7 @@
         <!-- =========== Input Data Pribadi ============  -->
         @if ($access == "admin")
         <li class="menu-item">
-            <a href="{{ route('data-public') }}" class="menu-link ">
+            <a href="{{ route('add-subjekpajak') }}" class="menu-link ">
 
 
                 <i class="menu-icon tf-icons bx bxs-user-plus"></i>

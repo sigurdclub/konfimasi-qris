@@ -7,12 +7,23 @@ use Illuminate\Http\Request;
 
 class DataPublicController extends Controller
 {
+
+    // ==== Data Public ==== // 
     public function dataPublicView()
     {
 
         // $data_public = DataSubjekPajak::all()->paginate(15);
         $data_public = DataSubjekPajak::first()->filter(request(['search']))->orderBy('id', 'desc')->paginate(15);;
         return view('pages.data-public.dataPublic',compact('data_public'));
+    }
+
+
+    // add subjek pajak view
+
+
+    public function addSubjekPajak(){
+
+        return view('pages.input-data.inputData');
     }
 
     // Method showing form input data public baru

@@ -10,7 +10,7 @@
 
                         {{ csrf_field() }}
 
-                        <div class="col-12" style="display: flex; justify-content: right;margin-top: 3%">
+                        <div class="" style="display: flex; justify-content: right;margin-top: 3%">
                             <input
                             type="text"
                             class="form-control"
