@@ -10,8 +10,8 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $nop = Auth::user()->name;
-        $userData = DataSubjekPajak::where('SUBJEK_PAJAK_ID',$nop)->get();
-        return view('pages.dashboard.dashboard',compact('userData'));
+        // $nop = Auth::user()->name;
+        // $userData = DataSubjekPajak::where('SUBJEK_PAJAK_ID',$nop)->get();
+        return view('pages.dashboard.dashboard');
     }
 }
