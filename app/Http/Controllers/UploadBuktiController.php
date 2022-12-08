@@ -62,12 +62,10 @@ class UploadBuktiController extends Controller
         return redirect('/history-transaksi');
     }
 
-    //Method view form edit data
-    // public function edit($id)
-    // {
-    //     $model = UploadBukti::find($id);
-    //     return view('pages.upload-transaksi.edit', compact('model'));
-    // }
+    public function cancelTransaksi($id)
+    {
+        UploadBukti::find($id)->delete();
+    }
 
 
 

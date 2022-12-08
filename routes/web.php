@@ -52,9 +52,7 @@ Route::controller(LoginController::class)->group(function(){
 
     //  Route submit data
     Route::post('upload-transaksi/store', [UploadBuktiController::class, 'store'])->name('upload-transaksi/store');
-    Route::get('upload-transaksi/edit{id}', [UploadBuktiController::class, 'edit']);
-    Route::post('upload-transaksi/update{id}', [UploadBuktiController::class, 'update']);
-    Route::post('upload-transaksi/delete{id}', [UploadBuktiController::class, 'delete']);
+    Route::post('upload-transaksi/cancel{id}', [UploadBuktiController::class, 'cancelTransaksi'])->name('cancelTransaksi');
 
 
 

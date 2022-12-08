@@ -40,7 +40,7 @@
 
                                 <!-- Actions Cek -->
                                     @if ($item->status == "pending")
-                                        <th>Actions</th> 
+                                        <th>Actions</th>
                                     @endif
 
                                 </tr>
@@ -60,7 +60,7 @@
                                     <td>
                                         <span class="badge bg-label-warning me-1">{{ $item->status }}</span>
                                     </td>
-                                    
+
                                 @else
                                     <td>
                                         <span class="badge bg-label-success me-1">{{ $item->status }}</span>
@@ -69,14 +69,18 @@
 
                                 @if ($item->status == "pending")
                                     <td>
-                                        <button style="font-size: 12px" type="button" class="btn btn-danger">Cancel</button>
+                                        <a href="{{ url('status-transaksi/cancel'.'/'.$item->id) }}">
+
+                                            <button style="font-size: 12px" type="button" class="btn btn-danger">Cancel</button>
+
+                                        </a>
                                     </td>
-                                    
+
                                 @else
-                                    
+
                                 @endif
 
-                                
+
                                 </tr>
 
 
