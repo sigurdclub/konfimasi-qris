@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\DataSubjekPajak;
 use App\Models\User;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -18,6 +19,8 @@ class DataPribadiController extends Controller
         $nop        = Auth::user()->name;
         
         $userData   = DataSubjekPajak::where('SUBJEK_PAJAK_ID',$nop)->get();
+
+        
 
         return view('pages.data-pribadi.dataPribadi',compact('userData'));
     }

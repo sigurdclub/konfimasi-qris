@@ -94,6 +94,9 @@ Route::controller(LoginController::class)->group(function(){
     // Route::get('data-public', [DataPublicController::class, 'createDataPublic'])->name('data-public');
     Route::post('data-public', [DataPublicController::class, 'storeDataPublic'])->name('data-public');
 
+    // add subjek pajak
+    Route::get('add-subjekpajak', [DataPublicController::class, 'addSubjekPajak'])->name('add-subjekpajak');
+
 
 
     // ====== verifikasi transaksi ======== //
