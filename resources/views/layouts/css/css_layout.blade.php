@@ -1,5 +1,5 @@
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="{{ asset('template/img/favicon/favicon.ico') }}" />
+<link rel="icon" type="image/x-icon" href="{{ asset('assets/img/KabupatenMaros.png') }}" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,13 +15,16 @@ rel="stylesheet"
 <!-- Vendors Core CSS -->
 <link rel="stylesheet" href="{{asset('template/assets/vendor/css/core.css') }} " class="template-customizer-core-css" />
 <link rel="stylesheet" href="{{asset('template/assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
-<link rel="stylesheet" href="{{asset(' template/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+{{-- <link rel="stylesheet" href="{{asset(' template/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" /> --}}
 <link rel="stylesheet" href="{{asset('template/assets/vendor/libs/apex-charts/apex-charts.css') }} " />
 <link rel="stylesheet" href="{{asset('template/assets/css/demo.css') }} " />
 
 
+
+
 <!-- CSS Bootstrap -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
 
 <!-- Mind CSS -->

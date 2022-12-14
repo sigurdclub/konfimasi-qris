@@ -38,7 +38,7 @@
         
     </head>
 
-    <body>
+    <body style="background-color: #f5f5f9">
         <!-- Layout wrapper -->
         <section class="layout-wrapper layout-content-navbar">
         <section class="layout-container">

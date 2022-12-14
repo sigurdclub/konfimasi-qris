@@ -15,7 +15,7 @@
                         <div class="col-12" style="display: flex; justify-content: right;margin-top: 3%">
                             <input
                             type="text"
-                            class="form-control"
+                            class="form-control search-dataPribadi"
                             placeholder="Pencarian..."
                             aria-label="Pencarian..."
                             style="width: 30%;margin:12px"
@@ -28,9 +28,16 @@
             </div>
 
         @if(count($data_public) > 0)
-        @foreach ($data_public as $item)
+        @foreach ($data_public as $key =>$item)
 
-        <div class="card mt-4" style="width: 18rem;">
+        <div class="card mt-4" style="width: 18rem;" {{ $key }}>
+            <section style="padding: 12px;display: flex;justify-content: end">
+
+                <a class="delete-dataPublic" data-id="{{ $item->id }}" data-nama = "{{ $item->NM_WP }}">
+
+                    <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                </a>
+            </section>
             <img src="assets/img/profile icon.png" width="50%" class="rounded mx-auto d-block m-3" alt="...">
             <div class="card-body">
                 <h5 style="text-align: center;color: black" class="card-title">{{ $item->SUBJEK_PAJAK_ID }}</h5>
@@ -62,12 +69,14 @@
             </footer>
         </div>
         @endforeach
+
         @else
             <p class="tex-center fs-4">Data Tidak Ditemukan</p>
         @endif
 
     </section>
     <div class="d-flex justify-content-end " style="margin: 2em">
+
         {{$data_public->links()}}
     </div>
     @endsection

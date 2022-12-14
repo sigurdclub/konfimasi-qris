@@ -2,13 +2,13 @@
 
     @section('content')
         
-        <section class="container-fluid mt-2 row;" style="justify-content: center">
+        <section class="  mt-2 row container-uploadBukti" style="justify-content: center; margin: 12px">
             <h4 style="margin-top:2%;color:black;font-family: code">Upload Bukti Transaksi</h4>
-                <article class="icon-number" style="display: flex;justify-content: center;margin: 14px">
+                <article class="step-uploadBukti icon-number" style="display: flex;justify-content: center;margin: 14px">
                     
                     <div>
                         <img class="rounded mx-auto d-block" src="assets/svg/number-circle-one.svg" alt="" width="15%">
-                        <p>Isi Berkas</p>
+                        <p class="text-isiBerkas">Isi Berkas</p>
                     </div>
                     <div>
                         <img class="rounded mx-auto d-block" src="assets/svg/two.png" alt="" width="22%">
@@ -22,7 +22,7 @@
                         
                 </article>
             
-            <div class="card none-border"  style="width: 100%;margin-top:2%">
+            <div class="card card-uploadBukti none-border"  style="width: 100%;margin-top:2%;padding: 12px">
                 <div class="card-body">
 
                     
@@ -44,6 +44,8 @@
                                 aria-label          = "John Doe"
                                 name                = "nop"
                                 style               = "padding: 12px"
+                                value               = "{{ Auth::user()->name }}"
+                                
                                 required
                                 aria-describedby    = "basic-icon-default-fullname2"
                                 />
@@ -125,7 +127,7 @@
                     
                     
                     <!-- Button Next -->
-                        <div class="row" style="justify-content: end;margin-bottom:5%">
+                        <div class="row" style="justify-content: end;margin-bottom:5%;margin: 12px">
                             <button class="button-next" style="width: 12%" type="submit">
                                 <span>Next</span>
                                 <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">

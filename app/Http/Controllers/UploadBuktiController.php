@@ -61,7 +61,7 @@ class UploadBuktiController extends Controller
         }
 
         UploadBukti::create($validate);
-        return redirect('/history-transaksi');
+        return redirect('/status-transaksi');
     }
 
 

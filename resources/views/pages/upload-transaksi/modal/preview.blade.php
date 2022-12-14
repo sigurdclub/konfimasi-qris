@@ -50,6 +50,9 @@
 
         <link rel="stylesheet" href="template/assets/vendor/libs/apex-charts/apex-charts.css" />
 
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+
         <style>
 
     #overlay {
@@ -80,13 +83,13 @@
     </head>
 
     <body id="overlay">
-        <section class="container-fluid mt-2 mb-4 row" style="justify-content: center">
+        <section class="container-preview" style="display: flex;justify-content: center;margin-top: 3%">
 
-            <div class="card none-border shadowBox"  style="width: 80%;margin-top:2%;margin-bottom:5%">
+            <div class="card card-preview none-border shadowBox"  style="width: 80%;margin-top:2%;margin-bottom:5%">
                 <div class="card-body">
                     <!-- Images Maros -->
                     <div style="display: flex;justify-content: center">
-                        <img src="assets/img/KabupatenMaros.png" alt="" width="10%">
+                        <img class="logo-preview" src="assets/img/KabupatenMaros.png" alt="" width="10%">
                     </div>
 
                     <!-- Icon Number -->
@@ -109,7 +112,7 @@
                     </article>
 
 
-                    <form class="mt-5" action="{{ url('upload-transaksi/store') }}" method="post" enctype="multipart/form-data">
+                    <form class="mt-5 form-preview" style="padding: 2em" action="{{ url('upload-transaksi/store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <!-- NOP -->
                         <div class="row mb-5">
@@ -229,22 +232,37 @@
 
                     <div  style="display: flex; justify-content: end">
                         <div class="">
-                            <button type="submit" class="btn btn-danger">Cancel</button>
-                            <button type="submit" class="btn btn-success">Submit</button>
+                           
 
+                                <button type="button"  class="btn btn-danger" onclick="history.back()">Cancel</button>
+                            
+                            <button type="submit" class="btn btn-success btn-submit">Submit</button>
                         </div>
                     </div>
                 </form>
                 </div>
             </div>
-
-            {{-- {{ $nop }} --}}
-
-
         </section>
 
 
+        <!-- Sweat Alert -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+        <script>
+
+            $('.btn-submit').click( () => {
+                Swal.fire({
+    
+                icon: 'success',
+                title: 'Transaksi Anda Sedang Di Proses ',
+                text: 'Terima Kasih',
+                showConfirmButton: false,
+                timer: 5000
+                })
+
+            })
+
+        </script>
 
 
         <!-- Core JS -->

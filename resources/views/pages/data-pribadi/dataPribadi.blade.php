@@ -8,7 +8,7 @@
             @foreach ($userData as $item)
             
             <!-- Image Profile -->
-                <div class="card none-border" style="width: 30rem;">
+                <div class="card card-profile-public none-border" style="width: 30rem; background-color: unset">
                     <div class="card-body">
                         <article style="display:flex ; ">
                             <div class="container-icon-edit">
@@ -25,9 +25,9 @@
 
                 
                 <!-- Form  -->
-                <section style="display: flex; justify-content: center">
+                <section style="display: flex; justify-content: center;margin-bottom: 5%">
 
-                    <div class="card none-border" style="width: 60rem;">
+                    <div class="card card-form-dataPribadi none-border" style="width: 60rem;">
                         <div class="card-body">
                             <form action="data-pribadi/editNumber" method="POST">
                                 @csrf
@@ -36,7 +36,7 @@
                                 <section class="row" >
                                     <div class="card none-border" style="width: 28rem;">
                                         <div class="card-body">
-                                            <label class="form-label" for="basic-icon-default-fullname">Subjuk Pajak ID</label>
+                                            <label class="form-label" for="basic-icon-default-fullname">Subjek Pajak ID</label>
                                             <div class="input-group input-group-merge">
                                                 <span id="basic-icon-default-fullname2" class="input-group-text">
                                                     <i class="bx bx-user"></i>
@@ -172,8 +172,8 @@
                                 </section>
 
                                 <!-- button save -->
-                                <section style="display: flex; justify-content: center;margin-top:2%">
-                                    <button type="submit" class="btn btn-primary" style="width: 30% ;background-color: #18c42c;border: 1px black solid">Save</button>
+                                <section style="display: flex; justify-content: center;margin-top:4%;padding: 12px">
+                                    <button type="submit" class="btn btn-public-datapribadi btn-primary" style="width: 30% ;background-color: #18c42c;border: 1px black solid">Save</button>
                                 </section>
 
                             </form>

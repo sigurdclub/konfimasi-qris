@@ -5,7 +5,7 @@
         <script>
             document.write(new Date().getFullYear());
         </script>
-        , made with ❤️ by
+        , SigurdClub
         
     </div>
 </footer>

@@ -8,6 +8,160 @@
             src: url(/assets/font/coolvetica-condensed-rg.otf);
         }
 
+
+        /* ====== Responsive media ======  */
+
+        /* responsive desktop */
+        @media screen and (max-width: 1200px) {
+            .menu-toogleNavbar{
+                opacity: unset !important;
+            }
+            #dateTime{
+                display: none;
+            }
+        }
+
+        /* For Tablet View */
+        @media screen and (min-device-width: 768px)
+        and (max-device-width: 1024px) {
+            .card-form-dataPribadi .card{
+                width: 100% !important;
+            }
+            
+            .btn-public-datapribadi{
+                width: 100% !important;
+            }
+            .card-historyTransaksi{
+                width: 100% !important;
+            }
+        }
+
+
+
+
+        /*===== Responsive Mobile =======*/
+
+/*===== For Mobile Phones Portrait or Landscape View */
+    @media screen and (max-device-width: 640px) {
+        .card-profile-inputData,
+        .card-alamat-InputData{
+            display: none;
+        }
+
+        .card-profile,
+        .card-alamat
+        {
+            width: 100% !important;
+        }
+
+        .search-historyTransaksi,
+        .search-statusTransaksi,
+        .search-dataPribadi{
+            width: 100% !important;
+        }
+
+
+
+
+        .text-dashboard-QRIS{
+            font-size: 18px !important;
+        }
+
+        .button-dashboard{
+            font-size: 14px !important;
+        }
+
+
+        /* Upload Bukti  */
+
+        .container-uploadBukti{
+            margin-top: 5% !important;
+        }
+        .step-uploadBukti{
+            margin-top: 10% !important;
+        }
+
+        .step-uploadBukti img {
+            width: 30%;
+        }
+
+        .step-uploadBukti .text-isiBerkas {
+            font-size: 15px;
+        }
+
+        .button-next span {
+            display: none;
+        }
+        .button-next{
+            width: 35% !important;
+        }
+        
+        .card-uploadBukti{
+            margin-bottom: 15%;
+        }
+
+        /* Card Preview */
+
+        .container-preview{
+            margin-top: unset !important;
+        }
+
+        .card-preview{
+            width: unset !important;
+            margin-bottom: unset !important;
+            margin-top: unset !important;
+        }
+        .logo-preview{
+            width: 30% !important; 
+        }
+
+        .form-preview{
+            padding: 12px !important;
+        }
+
+        .icon-number {
+            margin-top: 15% !important;
+        }
+
+        .icon-number img{
+            width: 30% !important;
+        }
+
+        
+        
+        /*======= Data Pribadi public ======== */
+        .card-profile-public{
+            width: 100% !important;
+        }
+        .card-profile-public img{
+            width: 80% !important;
+        }
+        .btn-public-datapribadi{
+            width: 100% !important;
+        }
+
+        /* Card History Transaksi */
+
+        .card-historyTransaksi{
+            width: 100% !important;
+        }
+    }
+
+
+
+
+    @media screen and (max-width: 280px) {
+        .text-dashboard-QRIS{
+            font-size: 10px !important;
+        }
+
+        .button-dashboard{
+            font-size: 10px !important;
+        }
+    }
+
+
+
         a {
             text-decoration: unset;
         }
@@ -131,9 +285,46 @@
         
         
 
+        
+        /* ==== history transaksi ==== */
+    .table-history-transaksi th{
+        color: black !important;
+        font-size: 14px !important;
+        
+        padding: 12px;
+    }
+    .table-history-transaksi td{
+        color: black !important;
+        font-size: 14px !important;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 12px;
+    }
+    
     /* ==== status transaksi ==== */
-
     .table-status-transaksi th{
         color: black !important;
         font-size: 14px !important;
+        
+        padding: 12px;
+    }
+    .table-status-transaksi td{
+        color: black !important;
+        font-size: 14px !important;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 12px;
+    }
+    .tr-td{
+        background-color: white;
+    }
+    .tr-td-1{
+        background-color: white;
+    }
+    
+    .tr-td:hover{
+        background-color: rgba(0, 255, 21, 0.16) !important;
+    }
+    .tr-td-1:hover{
+        background-color: rgba(255, 167, 5, 0.377) !important;
     }

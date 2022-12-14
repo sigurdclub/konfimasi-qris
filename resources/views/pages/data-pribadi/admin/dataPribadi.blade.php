@@ -7,7 +7,7 @@
 
 
         <!-- Image Profile -->
-            <div class="card none-border" style="width: 30rem;">
+            <div class="card none-border" style="width: 30rem;background-color: unset">
                 <div class="card-body">
                     <article style="display:flex ; ">
                         <div class="container-icon-edit">
@@ -24,9 +24,9 @@
 
 
             <!-- Form  -->
-            <section style="display: flex; justify-content: center">
+            <section style="display: flex; justify-content: center;margin-top: 3%; margin-bottom: 5%">
 
-                <div class="card none-border" style="width: 60rem;">
+                <div class="card none-border" style="width: 60rem; background-color: unset">
                     <div class="card-body">
                         <form action="{{ route('data-pribadi/update') }}" method="POST">
                             @csrf
@@ -176,19 +176,10 @@
                             </section>
 
                             <!-- button save -->
-                            <section style="display: flex; justify-content: center;margin-top:2%">
-                                <button type="submit" class="btn btn-primary" style="width: 30% ;background-color: #18c42c;border: 1px black solid">Save</button>
+                            <section style="display: flex; justify-content: center;margin-top:4%">
+                                <button type="submit" class="btn btn-primary btn-adminDatapribadi" style="width: 30% ;background-color: #18c42c;border: 1px black solid">Save</button>
                             </section>
-                            <!-- button save -->
-                            <section >
-                                <a href="{{url('data-pribadi/delete'.$singleData->id)}}">
-
-                                    <button type="submit" class="btn btn-danger" style="width: 30% ;background-color: #18c42c;border: 1px black solid">Delete</button>
-
-                                </a>
-
-                            </section>
-
+                          
                         </form>
                     </div>
                 </div>

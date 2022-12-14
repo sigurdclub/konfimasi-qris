@@ -59,7 +59,7 @@ Route::controller(LoginController::class)->group(function(){
     // ======== Cek Status Transaksi ======== //
     Route::get('status-transaksi', [StatusTransaksiController::class, 'statusTransaksiView'])->name('status-transaksi');
 
-    Route::get('status-transaksi/delete{id}', [StatusTransaksiController::class, 'cancelTransaksi'])->name('cancelTransaksi');
+    Route::get('status-transaksi/delete/{id}', [StatusTransaksiController::class, 'cancelTransaksi'])->name('cancelTransaksi');
 
 
 
@@ -75,8 +75,7 @@ Route::controller(LoginController::class)->group(function(){
     // Update Number
     Route::post('data-pribadi/editNumber', [DataPribadiController::class, 'editNumber'])->name('editNumber');
 
-    //delete
-    Route::get('data-pribadi/delete{id}', [DataPublicController::class, 'deleteDataPribadi'])->name('deleteDataPribadi');
+    
 
 
 
@@ -106,6 +105,8 @@ Route::controller(LoginController::class)->group(function(){
     //delete
     // Route::get('data-public/delete{id}', [DataPublicController::class, 'deleteDataPublic'])->name('deleteDataPublic');
 
+    //delete
+    Route::get('data-public/delete/{id}', [DataPublicController::class, 'deleteDataPribadi'])->name('data-public/delete{id}');
 
 
     // ====== verifikasi transaksi ======== //

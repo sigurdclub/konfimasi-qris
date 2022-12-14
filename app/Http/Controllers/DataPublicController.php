@@ -44,30 +44,30 @@ class DataPublicController extends Controller
 
 
         DataSubjekPajak::create([
-            'SUBJEK_PAJAK_ID'   => $SUBJEK_PAJAK_ID,
-            'NM_WP'             => $NM_WP,
-            'JALAN_WP'          => $JALAN_WP,
-            'BLOK_KAV_NO_WP'    => $BLOK_KAV_NO_WP,
-            'RW_WP'             => $RW_WP,
-            'RT_WP'             => $RT_WP,
-            'KELURAHAN_WP'      => $KELURAHAN_WP,
-            'KOTA_WP'           => $KOTA_WP,
-            'KD_POS_WP'         => $KD_POS_WP,
-            'TELP_WP'           => $TELP_WP,
-            'NPWP'              => $NPWP,
-            'STATUS_PEKERJAAN_WP'=> $STATUS_PEKERJAAN_WP,
+            'SUBJEK_PAJAK_ID'       => $SUBJEK_PAJAK_ID,
+            'NM_WP'                 => $NM_WP,
+            'JALAN_WP'              => $JALAN_WP,
+            'BLOK_KAV_NO_WP'        => $BLOK_KAV_NO_WP,
+            'RW_WP'                 => $RW_WP,
+            'RT_WP'                 => $RT_WP,
+            'KELURAHAN_WP'          => $KELURAHAN_WP,
+            'KOTA_WP'               => $KOTA_WP,
+            'KD_POS_WP'             => $KD_POS_WP,
+            'TELP_WP'               => $TELP_WP,
+            'NPWP'                  => $NPWP,
+            'STATUS_PEKERJAAN_WP'   => $STATUS_PEKERJAAN_WP,
         ]);
         return redirect('/data-public');
     }
 
 
-    // public function deleteDataPublic($id)
-    // {
+    public function deleteDataPribadi($id)
+    {
 
-    //     $data = DB::table('dat_subjek_pajak')->where($id);
-    //     $data->delete();
+        $data = DB::table('dat_subjek_pajak')->where('id',$id);
+        $data->delete();
 
-    //     return redirect('data-public');
+        return redirect('/data-public');
 
-    // }
+    }
 }

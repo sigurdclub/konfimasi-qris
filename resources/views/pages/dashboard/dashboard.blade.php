@@ -20,7 +20,7 @@
                 <section style="display: flex; justify-content: center ">
                     <div class="card none-border" style="width: 70%;">
                         <div class="card-body">
-                            <h4 style="text-align: center;font-size: 3em ;color: black; font-family: code">QRIS hadir mempermudah pembayaran anda</h4>
+                            <h4 class="text-dashboard-QRIS" style="text-align: center;font-size: 3em ;color: black; font-family: code">QRIS hadir mempermudah pembayaran anda</h4>
                         </div>
                     </div>
                 </section>
@@ -37,6 +37,8 @@
                     </div>
                 </section>
 
+
+                    
 
                 
                 <!-- Modal Tutorial and QR Code -->
