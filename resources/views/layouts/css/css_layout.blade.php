@@ -1,6 +1,12 @@
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/KabupatenMaros.png') }}" />
 
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

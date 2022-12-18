@@ -48,6 +48,8 @@
 
     <ul class="menu-inner py-1">
         <!-- ======== Dashboard ======== -->
+        @if ($access == "public")
+            
         <li class="menu-item ">
         <a href="/" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
@@ -56,6 +58,7 @@
             </div>
         </a>
         </li>
+        @endif
 
 
         <li class="menu-header small text-uppercase">

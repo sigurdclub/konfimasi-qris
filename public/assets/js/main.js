@@ -26,11 +26,11 @@
 let span = document.getElementById('dateTime');
 
 function time() {
-  var d = new Date();
-  var s = d.getSeconds();
-  var m = d.getMinutes();
-  var h = d.getHours();
-  span.textContent = 
+    var d = new Date();
+    var s = d.getSeconds();
+    var m = d.getMinutes();
+    var h = d.getHours();
+    span.textContent = 
     ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
 }
 
@@ -104,7 +104,7 @@ $('.btn-thumbsVerifikasi').click( function (){
     console.log(id);
 
     Swal.fire({
-title: `Apakah Transaksi Sudah Benar ? `,
+title: `Apakah Anda Ingin Melakukan Validasi ? `,
 
 text: "Tekan Ya Jika Benar. ",
 icon: 'warning',
