@@ -3,7 +3,7 @@
     @section('content')
         <section class="container-fluid mt-2 row" style="justify-content: center">
             <h4 style="margin-top:2%;color:black;font-family: code">Status Transaksi</h4>
-        
+
                 <!--========= Search ============-->
             <div class="row justify-content-end mb-3">
                 <div class="">
@@ -36,17 +36,18 @@
                                     <th>NAMA SUBJEK</th>
                                     <th>NAMA PENGIRIM</th>
                                     <th>NO HP / NO WA</th>
+                                    <th>NOMINAL</th>
                                     <th style="width: 10%">BUKTI BAYAR</th>
                                     <th >STATUS</th>
 
                                     <th>Actions</th>
                                     {{-- @foreach ($data as $item)
-                                        
+
                                         <!-- Actions Cek -->
                                         @if ($item->status == "pending")
                                         @endif
                                     @endforeach --}}
-                                    
+
                                 </tr>
                             </thead>
                             @foreach ($data as $item)
@@ -56,6 +57,7 @@
                                 <td>{{ $item->nama_subjek }}</td>
                                 <td>{{ $item->nama_pengirim }}</td>
                                 <td>{{ $item->no_hp }}</td>
+                                <td>{{ $item->nominal }}</td>
 
                                 <td>
                                     <img style="width: 80%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">
@@ -74,7 +76,7 @@
 
                                 @if ($item->status == "pending")
                                     <td>
-                                        
+
                                             <button data-id="{{ $item->id }}" data-nama="{{ $item->nop }}" style="font-size: 12px" type="button" class="btn btn-danger btn-cancel-statusTransaksi" ><i style="font-size: 20px" class="fa-solid fa-xmark"></i></button>
                                     </td>
 
@@ -93,14 +95,14 @@
                             <p class="tex-center fs-4">Data Tidak Ditemukan</p>
                         @endif
                     </div>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-end mt-2">
                         {{$data->links()}}
                     </div>
                 </div>
             </div>
         </section>
 
-        
-        
+
+
 
     @endsection

@@ -1,11 +1,11 @@
     @extends('main')
 
     @section('content')
-        
+
         <section class="  mt-2 row container-uploadBukti" style="justify-content: center; margin: 12px">
             <h4 style="margin-top:2%;color:black;font-family: code">Upload Bukti Transaksi</h4>
                 <article class="step-uploadBukti icon-number" style="display: flex;justify-content: center;margin: 14px">
-                    
+
                     <div>
                         <img class="rounded mx-auto d-block" src="assets/svg/number-circle-one.svg" alt="" width="15%">
                         <p class="text-isiBerkas">Isi Berkas</p>
@@ -18,16 +18,16 @@
                         <img class="rounded mx-auto d-block" src="assets/svg/circle-three.svg" alt="" width="15%">
                         <p style="color: rgb(145, 145, 145)">Submit Berkas</p>
                     </div>
-                        
-                        
+
+
                 </article>
-            
+
             <div class="card card-uploadBukti none-border"  style="width: 100%;margin-top:2%;padding: 12px">
                 <div class="card-body">
 
-                    
+
                     <form class="form-upload" action="{{ url('preview') }}" method="get" enctype="multipart/form-data">
-                        
+
                         <!-- NOP -->
                         <div class="row mb-5">
                             <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">NOP</label>
@@ -45,7 +45,7 @@
                                 name                = "nop"
                                 style               = "padding: 12px"
                                 value               = "{{ Auth::user()->name }}"
-                                
+
                                 required
                                 aria-describedby    = "basic-icon-default-fullname2"
                                 />
@@ -57,10 +57,10 @@
                     <div class="row mb-5">
                         <label class="col-sm-2 col-form-label" for="basic-icon-default-company">Nama Subjek</label>
                         <div class="col-sm-10">
-                            
+
                             <div class="input-group input-group-merge">
                                 <span id="basic-icon-default-company2" class="input-group-text"
-                                
+
                                 ><i class="bx bx-user "></i
                                     ></span>
                                     <input
@@ -71,13 +71,13 @@
                                     aria-label          = "ACME Inc."
                                     style               = "padding: 12px"
                                     name                = "nama_subjek"
- 
- required                                   aria-describedby    = "basic-icon-default-company2"
+                                    aria-describedby    = "basic-icon-default-company2"
+                                    required
                                     />
                                 </div>
                             </div>
                         </div>
-            
+
                         <!-- nama pengirim -->
                         <div class="row mb-5">
                             <label class="col-sm-2 col-form-label" for="basic-icon-default-email">Nama Pengirim</label>
@@ -95,14 +95,14 @@
                                 required
                                 aria-describedby    = "basic-icon-default-email2"
                                 />
-                                
+
                         </div>
                         </div>
                         </div>
-                        
+
                         <!-- No Hp -->
                         <div class="row mb-5">
-                            
+
                         <label class="col-sm-2 form-label" for="basic-icon-default-phone" style="font-size: 16px">No Handphone /  No WA</label>
                         <div class="col-sm-10">
                             <div class="input-group input-group-merge">
@@ -123,9 +123,33 @@
                             </div>
                         </div>
                         </div>
+
+                        <!-- Nominal -->
+                        <div class="row mb-5">
+
+                        <label class="col-sm-2 form-label" for="" style="font-size: 16px">Nominal</label>
+                        <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                                <span id="" class="input-group-text"
+                                ><i class=""></i
+                                    ></span>
+                            <input
+                                id                  = ""
+                                type                = "text"
+                                class               = ""
+                                placeholder         = "Rp"
+                                aria-label          = "12000"
+                                name                = "nominal"
+                                style               = "padding: 12px"
+                                required
+                                aria-describedby    = ""
+                                />
+                            </div>
+                        </div>
+                        </div>
                     </div>
-                    
-                    
+
+
                     <!-- Button Next -->
                         <div class="row" style="justify-content: end;margin-bottom:5%;margin: 12px">
                             <button class="button-next" style="width: 12%" type="submit">
@@ -136,15 +160,14 @@
                                 </svg>
                             </button>
                         </div>
-                    
+
                     </form>
                 </div>
             </div>
 
 
-            
+
         </section>
 
-    
+
     @endsection
-    

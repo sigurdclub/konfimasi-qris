@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Collection;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HistoryTransaksiController extends Controller
 {
@@ -18,15 +19,23 @@ class HistoryTransaksiController extends Controller
 
         if(Auth::user()->role == 'admin'){
 
-            $histori = UploadBukti::first()->filter(request(['search']))->orderBy('id', 'desc')->paginate(5);
 
-            // if(request('search')){
-            //     $histori -> where('nop', 'like', '%' . $search . '%')
-            //             -> orWhere('nama_pengirim', 'like', '%' . $search . '%')
-            //             -> orWhere('nama_subjek', 'like', '%' . $search . '%')
-            //             -> orWhere('tanggal', 'like', '%' . $search . '%');
-            //     }
-            // }
+            if(request('tgl_awal') AND request('tgl_akhir')){
+                $tgl_awal = request('tgl_awal');
+                $tgl_akhir = request('tgl_akhir');
+
+                $histori = UploadBukti::first()->when(function($query)use($tgl_awal,$tgl_akhir){
+                    $query->whereBetween('tanggal',[$tgl_awal, $tgl_akhir]);
+                })->orderBy('id', 'desc')->paginate(5);
+
+            }else{
+                $histori = UploadBukti::first()
+                                        ->filter(request(['search']))
+                                        ->orderBy('id', 'desc')
+                                        ->paginate(5);
+            }
+
+
 
             return view('pages.history-transaksi.index', compact('histori'));
 
@@ -35,7 +44,7 @@ class HistoryTransaksiController extends Controller
             $name = Auth::user()->name;
             $histori = UploadBukti::where('nop',$name)
                                 ->filter(request(['search']))
-                                ->paginate(10);
+                                ->paginate(5);
 
             return view('pages.history-transaksi.index', compact('histori'));
         }

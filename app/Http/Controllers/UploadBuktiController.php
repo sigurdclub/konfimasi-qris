@@ -29,6 +29,7 @@ class UploadBuktiController extends Controller
         $no_hp              = $request->no_hp;
         $nama_subjek        = $request->nama_subjek;
         $nama_pengirim      = $request->nama_pengirim;
+        $nominal            = $request->nominal;
         $foto_bukti_bayar   = $request->foto_bukti_bayar;
 
         return view('pages.upload-transaksi.modal.preview',compact(
@@ -36,6 +37,7 @@ class UploadBuktiController extends Controller
             'no_hp',
             'nama_subjek',
             'nama_pengirim',
+            'nominal',
             'foto_bukti_bayar'
 
         ));
@@ -51,6 +53,7 @@ class UploadBuktiController extends Controller
             "nama_subjek"   => "required|string",
             "nama_pengirim" => "required|string",
             "no_hp"         => "required|string",
+            "nominal"         => "required|integer",
             "foto_bukti_bayar" => "required|image|mimes:jpeg,png,jpg|max:2048",
 
         ]);

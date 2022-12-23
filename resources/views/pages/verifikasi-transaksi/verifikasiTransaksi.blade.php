@@ -14,6 +14,7 @@
                                 <th>NAMA SUBJEK</th>
                                 <th>NAMA PENGIRIM</th>
                                 <th>NO HP / NO WA</th>
+                                <th>NOMINAL</th>
                                 <th style="width: 10%">BUKTI BAYAR</th>
                                 <th>STATUS</th>
                                 <th>ACTIONS</th>
@@ -32,6 +33,7 @@
                         <td>{{ $item->nama_subjek }}</td>
                         <td>{{ $item->nama_pengirim }}</td>
                         <td>{{ $item->no_hp }}</td>
+                        <td>{{ $item->nominal }}</td>
 
                         <td>
                             <img style="width: 80%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">
@@ -51,10 +53,10 @@
 
                         @if ($item->status == "pending")
                             <td>
-                                
+
 
                                     <button style="font-size: 12px" type="button" class="btn btn-success btn-thumbsVerifikasi" data-id="{{ $item->id }}"><i style="font-size: 20px" class="fa-solid fa-thumbs-up"></i></button>
-                                
+
                             </td>
                         @else
                             <td>
@@ -73,7 +75,7 @@
                     @endforeach
                     </table>
                 </div>
-                <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-end mt-2">
                     {{$all_data->links()}}
                 </div>
             </div>

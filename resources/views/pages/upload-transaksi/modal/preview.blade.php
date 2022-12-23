@@ -206,6 +206,29 @@
                         </div>
                         </div>
 
+                        <!-- Nominal -->
+                        <div class="row mb-5">
+                        <label class="col-sm-2 form-label" for="basic-icon-default-phone">Nominal</label>
+                        <div class="col-sm-10">
+                            {{-- <div class="input-group input-group-merge">
+                                <span id="" class="input-group-text"
+                                ><i class=""></i
+                                    ></span>  --}}
+                            <input
+                            id                  = "basic-icon-default-phone"
+                                type                = "text"
+                                class               = "form-control phone-mask"
+                                placeholder         = "12000"
+                                aria-label          = "12000"
+                                name                = "nominal"
+                                style="padding: 12px"
+                                value               = "{{ $nominal }}"
+                                aria-describedby    = "basic-icon-default-phone"
+                                />
+                            </div>
+                        </div>
+                        </div>
+
                         <!-- Foto Bukti Bayar -->
                         <div class="row mb-5">
                             <label class="col-sm-2 form-label" for="basic-icon-default-phone">Foto Bukti Bayar</label>
@@ -232,10 +255,10 @@
 
                     <div  style="display: flex; justify-content: end">
                         <div class="">
-                           
+
 
                                 <button type="button"  class="btn btn-danger" onclick="history.back()">Cancel</button>
-                            
+
                             <button type="submit" class="btn btn-success btn-submit">Submit</button>
                         </div>
                     </div>
@@ -252,7 +275,7 @@
 
             $('.btn-submit').click( () => {
                 Swal.fire({
-    
+
                 icon: 'success',
                 title: 'Transaksi Anda Sedang Di Proses ',
                 text: 'Terima Kasih',

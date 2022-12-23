@@ -16,6 +16,7 @@ class UploadBukti extends Model
         'nama_subjek',
         'nama_pengirim',
         'no_hp',
+        'nominal',
         'foto_bukti_bayar',
         'tanggal',
         'status',
@@ -26,13 +27,16 @@ class UploadBukti extends Model
     public function scopeFilter($query, array $filters)
     {
 
+
         $query->when($filters['search'] ?? false, function($query, $search){
 
             return $query -> where('nop', 'like', '%' . $search . '%')
                           -> orWhere('nama_pengirim', 'like', '%' . $search . '%')
-                          -> orWhere('nama_subjek', 'like', '%' . $search . '%')
+                        //   -> orWhere('nama_subjek', 'like', '%' . $search . '%')
                           -> orWhere('tanggal', 'like', '%' . $search . '%');
         });
+
+
 
     }
 }
