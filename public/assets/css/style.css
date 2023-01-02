@@ -8,6 +8,18 @@
             src: url(/assets/font/coolvetica-condensed-rg.otf);
         }
 
+        /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+
+            /* Firefox */
+            input[type=number] {
+            -moz-appearance: textfield;
+            }
+
 
         /* ====== Responsive media ======  */
 
@@ -145,6 +157,12 @@
         .card-historyTransaksi{
             width: 100% !important;
         }
+
+        .btn-historyTransaksi{
+            width: 100%;
+        }
+
+
     }
 
 
@@ -327,4 +345,10 @@
     }
     .tr-td-1:hover{
         background-color: rgba(255, 167, 5, 0.377) !important;
+    }
+    .no-hp-link{
+        color: black;
+    }
+    .no-hp-link:hover{
+        color: rgb(0, 134, 11);
     }

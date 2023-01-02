@@ -32,8 +32,12 @@
                         <td>{{ $item->nop }}</td>
                         <td>{{ $item->nama_subjek }}</td>
                         <td>{{ $item->nama_pengirim }}</td>
-                        <td>{{ $item->no_hp }}</td>
-                        <td>{{ $item->nominal }}</td>
+                        <td>
+                            <a class="no-hp-link" href="https://wa.me/{{ $item->no_hp }}" target="_blank">
+                                {{ $item->no_hp }}
+                            </a>
+                        </td>
+                        <td class="number-nominal">{{ $item->nominal }}</td>
 
                         <td>
                             <img style="width: 80%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">

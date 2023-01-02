@@ -9,7 +9,7 @@
             <div class="card-body">
 
                 @if (Auth::user()->role == "public")
-                     <!-- Image Logo Kabupaten Maros -->
+                <!-- Image Logo Kabupaten Maros -->
                 <img 
                 alt     = "Kabupaten Maros" 
                 src     = "assets/img/KabupatenMaros.png"
@@ -20,7 +20,7 @@
 
             <!-- Text -->
             <section style="display: flex; justify-content: center ">
-                <div class="card none-border" style="width: 70%;">
+                <div class="card none-border" style="width: 70%;background: unset">
                     <div class="card-body">
                         <h4 class=" animate__animated animate__pulse animate__slower animate__infinite text-dashboard-QRIS" style="text-align: center;font-size: 3em ;color: black; font-family: code">QRIS hadir mempermudah pembayaran anda</h4>
                     </div>
@@ -62,7 +62,7 @@
 
             <!-- Text -->
             <section style="display: flex; justify-content: center ">
-                <div class="card none-border" style="width: 70%;">
+                <div class="card none-border" style="width: 70%;background: unset">
                     <div class="card-body">
                         <h4 class=" animate__animated animate__pulse animate__slower animate__infinite text-dashboard-QRIS" style="text-align: center;font-size: 3em ;color: black; font-family: code">Selamat Bekerja {{ Auth::user()->name }}</h4>
                     </div>

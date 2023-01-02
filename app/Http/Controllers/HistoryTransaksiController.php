@@ -17,7 +17,7 @@ class HistoryTransaksiController extends Controller
     {
 
 
-        if(Auth::user()->role == 'admin'){
+        // if(Auth::user()->role == 'admin'){
 
 
             if(request('tgl_awal') AND request('tgl_akhir')){
@@ -27,6 +27,7 @@ class HistoryTransaksiController extends Controller
                 $histori = UploadBukti::first()->when(function($query)use($tgl_awal,$tgl_akhir){
                     $query->whereBetween('tanggal',[$tgl_awal, $tgl_akhir]);
                 })->orderBy('id', 'desc')->paginate(5);
+
 
             }else{
                 $histori = UploadBukti::first()
@@ -39,14 +40,14 @@ class HistoryTransaksiController extends Controller
 
             return view('pages.history-transaksi.index', compact('histori'));
 
-        }else{
+        // }else{
 
-            $name = Auth::user()->name;
-            $histori = UploadBukti::where('nop',$name)
-                                ->filter(request(['search']))
-                                ->paginate(5);
+        //     $name = Auth::user()->name;
+        //     $histori = UploadBukti::where('nop',$name)
+        //                         ->filter(request(['search']))
+        //                         ->paginate(5);
 
-            return view('pages.history-transaksi.index', compact('histori'));
-        }
+        //     return view('pages.history-transaksi.index', compact('histori'));
+        // }
     }
 }

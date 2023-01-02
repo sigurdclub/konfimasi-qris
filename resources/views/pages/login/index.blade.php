@@ -24,14 +24,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <!--===============================================================================================-->
 
+   <style>
+      
+      .alert-login{
+        position  : fixed;
+        z-index   : 2;
+        top       : 18%;
+        right     : 30%;
+        width     : 40%;
+      }
+
+
+   </style>
+
   <script src="https://kit.fontawesome.com/f10df6ea72.js" crossorigin="anonymous"></script>
 
   </head>
   <body>
     
+   
+
     <div class="limiter">
+      
       <div class="container-login100">
+        
+
+        @if (session()->has('loginError'))
+        <div class="alert alert-login alert-danger alert-dismissible fade show" role="alert">
+          {{ session('loginError') }}
+        </div>
+      @endif
+        
+
         <div class="wrap-login100">
+
+         
+
           <div class="login100-pic js-tilt" data-tilt>
             <img src="assets/img/KabupatenMaros.png" alt="IMG">
           </div>
@@ -42,11 +70,7 @@
             </div>
           @endif
 
-          @if (session()->has('loginError'))
-          <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            {{ session('loginError') }}
-          </div>
-        @endif
+          
 
         
         

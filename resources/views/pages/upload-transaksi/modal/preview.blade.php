@@ -53,6 +53,9 @@
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
 
+        <script src="https://kit.fontawesome.com/f10df6ea72.js" crossorigin="anonymous"></script>
+
+
         <style>
 
     #overlay {
@@ -188,17 +191,16 @@
                         <label class="col-sm-2 form-label" for="basic-icon-default-phone">No Handphone /  No WA</label>
                         <div class="col-sm-10">
                             <div class="input-group input-group-merge">
-                                <span id="basic-icon-default-phone2" class="input-group-text"
-                                ><i class="bx bx-phone"></i
-                                    ></span>
+                                <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-phone"></i></span>
+                                <span id="basic-icon-default-company2" class="input-group-text" style="background: unset;padding-right:unset"> 62</span>
                             <input
-                            id                  = "basic-icon-default-phone"
-                                type                = "text"
-                                class               = "form-control phone-mask"
+                                id                  = "basic-icon-default-phone"
+                                type                = "number"
+                                class               = "form-control phone-mask urlNumber"
                                 placeholder         = "658 799 8941"
                                 aria-label          = "658 799 8941"
                                 name                = "no_hp"
-                                style="padding: 12px"
+                                style               = "padding: 12px"
                                 value               = "{{ $no_hp }}"
                                 aria-describedby    = "basic-icon-default-phone2"
                                 />
@@ -206,28 +208,33 @@
                         </div>
                         </div>
 
-                        <!-- Nominal -->
+
+                        <!-- No Hp -->
                         <div class="row mb-5">
-                        <label class="col-sm-2 form-label" for="basic-icon-default-phone">Nominal</label>
-                        <div class="col-sm-10">
-                            {{-- <div class="input-group input-group-merge">
-                                <span id="" class="input-group-text"
-                                ><i class=""></i
-                                    ></span>  --}}
-                            <input
-                            id                  = "basic-icon-default-phone"
-                                type                = "text"
-                                class               = "form-control phone-mask"
-                                placeholder         = "12000"
-                                aria-label          = "12000"
-                                name                = "nominal"
-                                style="padding: 12px"
-                                value               = "{{ $nominal }}"
-                                aria-describedby    = "basic-icon-default-phone"
-                                />
+                            <label class="col-sm-2 form-label" for="basic-icon-default-phone">Nominal Pajak</label>
+                            <div class="col-sm-10">
+                                <div class="input-group input-group-merge">
+                                    <span id="basic-icon-default-phone2" class="input-group-text"
+                                    ><i class="fa-solid fa-money-bill"></i></span>
+                                <input
+                                    id                  = "basic-icon-default-phone"
+                                    type                = ""
+                                    class               = "form-control phone-mask nominal"
+                                    placeholder         = "70,000"
+                                    aria-label          = "658 799 8941"
+                                    name                = "nominal"
+                                    style               = "padding: 12px"
+                                    value               = "{{ $nominal }}"
+                                    aria-describedby    = "basic-icon-default-phone2"
+                                    
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        </div>
+                            </div>
+
+
+                        
+                        
 
                         <!-- Foto Bukti Bayar -->
                         <div class="row mb-5">
@@ -242,10 +249,9 @@
                                     type                = "file"
                                     aria-label          = "658 799 8941"
                                     name                = "foto_bukti_bayar"
-
-                                    class               = "form-control phone-mask"
+                                    class               = "form-control phone-mask "
                                     placeholder         = "658 799 8941"
-                                    value="{{ $foto_bukti_bayar }}"
+                                    value               = "{{ $foto_bukti_bayar }}"
                                     aria-describedby    = "basic-icon-default-phone2"
                                 />
                             </div>
@@ -255,10 +261,7 @@
 
                     <div  style="display: flex; justify-content: end">
                         <div class="">
-
-
                                 <button type="button"  class="btn btn-danger" onclick="history.back()">Cancel</button>
-
                             <button type="submit" class="btn btn-success btn-submit">Submit</button>
                         </div>
                     </div>
@@ -273,6 +276,8 @@
 
         <script>
 
+
+            // Alert Success
             $('.btn-submit').click( () => {
                 Swal.fire({
 
@@ -284,6 +289,30 @@
                 })
 
             })
+
+            // Number format
+            $('input.nominal').keyup(function(event) {
+                // skip for arrow keys
+                if(event.which >= 37 && event.which <= 40) return;
+                // format number
+                $(this).val(function(index, value) {
+                return value
+                .replace(/\D/g, "")
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                ;
+                });
+            });
+
+
+            // Url Number
+
+            $(document).ready(function () {
+                $(".urlNumber").change(function() {
+                    if (!/^62\/\//.test(this.value)) {
+                        this.value = "62" + this.value;
+                    }
+                });
+            });
 
         </script>
 

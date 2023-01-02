@@ -59,13 +59,17 @@
                 </a>
 
                 <!-- Message Button -->
-                <button type="button" class="btn button-color">
-                    <span><i class="fa-regular fa-envelope"></i></span>
-                    <span style="padding: 5px">
+                <a href="https://wa.me/{{ $item->TELP_WP }}" target="_blank">
 
-                        Message
-                    </span>
-                </button>
+                    <button type="button" class="btn button-color">
+                        <span><i class="fa-regular fa-envelope"></i></span>
+                        <span style="padding: 5px">
+    
+                            Message
+                        </span>
+                    </button>
+
+                </a>
             </footer>
         </div>
         @endforeach

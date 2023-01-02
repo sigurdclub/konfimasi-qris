@@ -16,7 +16,7 @@
                                 <img src="{{ asset('assets/img/profile icon.png') }}" class="rounded mx-auto d-block" alt="..." width="35%">
                             </div>
                             <div style="margin-top: 10%">
-                                <h3 style="font-family: code;color:black"> {{$item->NM_WP}} </h3>
+                                <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:black"> {{$item->NM_WP}} </h3>
                                 <h6 style="font-family: code;color: rgb(82, 82, 82)">{{ $item->SUBJEK_PAJAK_ID }}</h6>
                             </div>
                         </article>
@@ -155,16 +155,18 @@
                                             <label class="form-label" for="basic-icon-default-company">Telpon</label>
                                             <div class="input-group input-group-merge">
                                                 <span id="basic-icon-default-company2" class="input-group-text"><i class="bx bx-buildings"></i></span>
+                                                <span id="basic-icon-default-company2" class="input-group-text" style="background: unset;padding-right:unset"> 62</span>
                                                 <input
-                                                    id                  = "basic-icon-default-company"
-                                                    type                = "text"
+                                                    id                  = "basic-icon-default-company "
+                                                    type                = "number"
                                                     style               = "padding: 12px"
-                                                    class               = "form-control"
+                                                    class               = "form-control urlNumber"
                                                     value               = "{{ $item->TELP_WP }}"
                                                     aria-label          = "ACME Inc."
                                                     name                = "TELP_WP"
                                                     placeholder         = "ACME Inc."
                                                     aria-describedby    = "basic-icon-default-company2"
+                                                    maxlength           = "12"
                                                 />
                                             </div>
                                         </div>

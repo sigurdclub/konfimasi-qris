@@ -106,19 +106,19 @@
                         <label class="col-sm-2 form-label" for="basic-icon-default-phone" style="font-size: 16px">No Handphone /  No WA</label>
                         <div class="col-sm-10">
                             <div class="input-group input-group-merge">
-                                <span id="basic-icon-default-phone2" class="input-group-text"
-                                ><i class="bx bx-phone"></i
-                                    ></span>
+                                <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-phone"></i></span>
+                                <span id="basic-icon-default-company2" class="input-group-text" style="background: unset;padding-right:unset"> 62</span>
                             <input
                                 id                  = "basic-icon-default-phone"
-                                type                = "text"
-                                class               = "form-control phone-mask"
+                                type                = "number"
+                                class               = "form-control phone-mask urlNumber"
                                 placeholder         = "+62"
                                 aria-label          = "658 799 8941"
                                 name                = "no_hp"
                                 style               = "padding: 12px"
                                 required
                                 aria-describedby    = "basic-icon-default-phone2"
+                                maxlength="12"
                                 />
                             </div>
                         </div>
@@ -127,26 +127,27 @@
                         <!-- Nominal -->
                         <div class="row mb-5">
 
-                        <label class="col-sm-2 form-label" for="" style="font-size: 16px">Nominal</label>
-                        <div class="col-sm-10">
-                            <div class="input-group input-group-merge">
-                                <span id="" class="input-group-text"
-                                ><i class=""></i
-                                    ></span>
-                            <input
-                                id                  = ""
-                                type                = "text"
-                                class               = ""
-                                placeholder         = "Rp"
-                                aria-label          = "12000"
-                                name                = "nominal"
-                                style               = "padding: 12px"
-                                required
-                                aria-describedby    = ""
-                                />
+                            <label class="col-sm-2 form-label" for="basic-icon-default-phone" style="font-size: 16px">Nominal Pajak</label>
+                            <div class="col-sm-10">
+                                <div class="input-group input-group-merge">
+                                    <span id="basic-icon-default-phone2" class="input-group-text"
+                                    ><i class="fa-solid fa-money-bill"></i></span>
+                                <input
+                                    id                  = "input_id"
+                                    
+                                    class               = "form-control phone-mask nominal"
+                                    placeholder         = "70,000"
+                                    aria-label          = "658 799 8941"
+                                    name                = "nominal"
+                                    style               = "padding: 12px"
+                                    required
+                                    aria-describedby    = "basic-icon-default-phone2"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        </div>
+                            </div>
+
+
                     </div>
 
 

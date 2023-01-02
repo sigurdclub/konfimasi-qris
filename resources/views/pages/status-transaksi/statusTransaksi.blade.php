@@ -57,7 +57,7 @@
                                 <td>{{ $item->nama_subjek }}</td>
                                 <td>{{ $item->nama_pengirim }}</td>
                                 <td>{{ $item->no_hp }}</td>
-                                <td>{{ $item->nominal }}</td>
+                                <td class="number-nominal">Rp. {{ $item->nominal }}</td>
 
                                 <td>
                                     <img style="width: 80%" src="{{ asset('storage/' . $item->foto_bukti_bayar) }}" alt="">
