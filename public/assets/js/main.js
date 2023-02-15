@@ -17,22 +17,7 @@ setInterval(time, 1000);
 
 // Number total history nomina
 
-    let ammanu = document.getElementsByClassName('number-nominal');
-            
-            let store = [];
-            let total = 0
-            const total_nominal_history = document.querySelector('#total-nominal-history');
-            console.log(total_nominal_history);
-            for (let i = 0; i < ammanu.length; i++) {
-                
-                let ammanu_angka = parseInt(ammanu.item(i).innerText) 
-                store.push(ammanu_angka);
-                
-            }
-            for(i = 0 ; i < store.length ; i ++ ){
-                total += store[i];
-            }
-            total_nominal_history.innerHTML = total
+
 
 
 
@@ -50,7 +35,8 @@ setInterval(time, 1000);
     });
 
 
-// Number commas format
+
+    // Number commas format
     $.fn.digits = function(){ 
         return this.each(function(){ 
             $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
@@ -59,12 +45,6 @@ setInterval(time, 1000);
     $(".number-nominal").digits();
 
 
-    $.fn.digits = function(){ 
-        return this.each(function(){ 
-            $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
-        })
-    }
-    $(".number-total-history").digits();
 
     // URL Number
     $(document).ready(function () {
@@ -205,3 +185,48 @@ $('.delete-dataPublic').click( function()  {
             }
             })
         });
+
+
+
+        function countTotalTransaction(){
+            let ammanu = document.getElementsByClassName('number-nominal-history');
+            
+            let store = [];
+            let total = 0
+            
+            const total_nominal_history = document.querySelector('#total-nominal-history');
+            console.log(total_nominal_history);
+            for (let i = 0; i < ammanu.length; i++) {
+                
+                let ammanu_angka = parseInt(ammanu.item(i).innerText) 
+                store.push(ammanu_angka);
+                console.log(store);
+                
+            }
+            for(i = 0 ; i < store.length ; i ++ ){
+                total += store[i];
+                console.log(total);
+            }
+            total_nominal_history.innerHTML = total
+
+            return total_nominal_history;
+        }
+
+    countTotalTransaction()
+
+        
+
+    $.fn.digits = function(){ 
+        return this.each(function(){ 
+            $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+        })
+    }
+    $(".number-total-history").digits();
+
+    // Number commas format
+    $.fn.digits = function(){ 
+        return this.each(function(){ 
+            $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+        })
+    }
+    $(".number-nominal-history").digits();

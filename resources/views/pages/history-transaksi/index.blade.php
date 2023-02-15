@@ -72,6 +72,12 @@
                     </div>
                 </div>
 
+                <div>
+                    <a href="/exportexcel">
+                        <button>Export Excel</button>
+
+                    </a>
+                </div>
 
                 {{-- /Search --}}
                 <div class="card card-historyTransaksi none-border"  style="width: 50%;margin-top:2%;background-color: unset">
@@ -105,7 +111,7 @@
                                             {{ $item->nama_pengirim }}
                                         </p>
                                         <p  style="font-size: 16px">
-                                            Rp. <span class="number-nominal"> {{ $item->nominal }} </span> 
+                                            Rp. <span class="number-nominal-history"> {{ $item->nominal }} </span> 
                                         </p>
                                         <p style="color: rgba(34, 34, 34, 0.74)">
                                             {{ $item->tanggal }}
@@ -130,7 +136,7 @@
                         </div>
 
                         <section style="display: flex ; justify-content: center">
-                            <div class="card" style="width: 50%;margin-top: 5%">
+                            <div class="card card-total-transaction" style="width: 50%;margin-top: 5%">
                                 <div class="card-body" style="display: flex;justify-content: space-between">
                                         <h5 style="color: black;padding :5px">Total : </h5> 
                                         

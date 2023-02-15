@@ -85,9 +85,11 @@ Route::controller(LoginController::class)->group(function(){
         return view('pages.history-transaksi.index');
     });
 
+    Route::get('exportexcel', [HistoryTransaksiController::class, 'exportexcel'])->name('exportexcel');
 
     // ======== History Transaksi ======== //
     Route::get('history-transaksi', [HistoryTransaksiController::class, 'historyTransaksi'])->name('history-transaksi');
+    // ======== History Transaksi ======== //
 
     // ======== History Transaksi ======== //
     Route::get('history-transaksi-admin', [HistoryTransaksiController::class, 'historyTransaksi'])->name('history-transaksi-admin');

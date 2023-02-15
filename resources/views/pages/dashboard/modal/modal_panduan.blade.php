@@ -1,7 +1,7 @@
 
     <!-- Modal Panduan -->
     <div class="modal  fade" id="modalPanduan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
+        <div class="modal-dialog modal-xl modal-container">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: black">Bayar Lewat QRIS </h1>
@@ -13,7 +13,7 @@
 
                                 <!-- Corousel Item First -->
                                 <div class="carousel-item active" >
-                                    <div style="display: flex;justify-content: space-around">
+                                    <div style="display: flex;justify-content: space-around;flex-wrap: wrap">
                                         <!-- Step 1 Scan QRIS -->
                                         <div class="card none-border" style="width: 18rem;">
                                             <img src="assets/img/qr_code.png" class="card-img-top" alt="...">
@@ -74,7 +74,7 @@
 
                                 <!-- Corousel Item Second -->
                                 <div class="carousel-item">
-                                    <div style="display: flex;justify-content: space-around">
+                                    <div style="display: flex;justify-content: space-around;flex-wrap: wrap">
                                         <!-- Step 5 Upload Bukti Transaksi -->
                                         <div class="card none-border" style="width: 18rem;">
                                             <img src="assets/img/menu_upload.png" class="card-img-top" alt="...">

@@ -74,6 +74,7 @@
 
 
 
+        /* Dashbard */
 
         .text-dashboard-QRIS{
             font-size: 18px !important;
@@ -81,6 +82,19 @@
 
         .button-dashboard{
             font-size: 14px !important;
+        }
+
+        
+        .carousel-control-prev{
+            display: block !important;
+        }
+
+        .carousel-control-next{
+            display: block !important;
+        }
+
+        .qr-code-dialog{
+            margin-top: 30% !important;
         }
 
 
@@ -160,6 +174,35 @@
 
         .btn-historyTransaksi{
             width: 100%;
+        }
+
+        .card-total-transaction{
+            width: 100% !important;
+        }
+
+        .modal-container{
+            margin-top: 25%;
+        }
+
+        /* Data Pribadi admin */
+        .card-image{
+            width: unset !important;
+        }
+        .card-image article {
+            display: block !important;
+        }
+        .container-text h3,h6 {
+            text-align: center !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        }
+        .btn-adminDatapribadi{
+            width: 100% !important;
+        }
+
+        /* Login */
+
+        .option-login{
+            margin-top: 5% !important;
         }
 
 

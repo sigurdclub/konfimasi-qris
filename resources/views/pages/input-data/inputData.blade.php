@@ -305,14 +305,15 @@
                             <section class="row" >
                                 <div class="card none-border" style="width: 100%;">
                                     <div class="card-body">
-                                        <label class="form-label" for="basic-icon-default-fullname">Status Pekerjaan</label>
+                                        <label class="form-label" for="basic-icon-default-fullname">Status Pekerjaan</label> 
+                                        
                                     <div class="input-group input-group-merge">
                                         <span id="basic-icon-default-fullname2" class="input-group-text"
                                         ><i class="fa-solid fa-user-tie"></i></i
                                         ></span>
                                         <input
                                             id                  = "basic-icon-default-fullname"
-                                            type                = "text"
+                                            type                = "number"
                                             class               = "form-control"
                                             value               = ""
                                             style               ="padding: 12px"
@@ -324,6 +325,7 @@
                                     </div>
                                     </div>
                                 </div>
+                                
                             </section>
 
 

@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Exports\exportexcel;
 use App\Models\UploadBukti;
 use App\Models\DataSubjekPajak;
 use Illuminate\Support\Facades\Auth;
@@ -9,6 +11,7 @@ use Illuminate\Database\Eloquent\Collection;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
 
 class HistoryTransaksiController extends Controller
 {
@@ -49,5 +52,10 @@ class HistoryTransaksiController extends Controller
 
         //     return view('pages.history-transaksi.index', compact('histori'));
         // }
+    }
+
+
+    public function exportexcel(){
+        return Excel::download(new exportexcel, 'buktifisik.xlsx');
     }
 }
