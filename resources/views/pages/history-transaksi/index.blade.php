@@ -72,9 +72,10 @@
                     </div>
                 </div>
 
-                <div>
+                <div style="display: flex;justify-content: end;padding: 25px">
                     <a href="/exportexcel">
-                        <button>Export Excel</button>
+                        <button type="button" class="btn btn-success">Export Excel</button>
+
 
                     </a>
                 </div>

@@ -56,6 +56,6 @@ class HistoryTransaksiController extends Controller
 
 
     public function exportexcel(){
-        return Excel::download(new exportexcel, 'buktifisik.xlsx');
+        return Excel::download(new exportexcel, 'Bukti-Fisik.xlsx');
     }
 }
